@@ -53,3 +53,6 @@ export LANG=en_US.utf8
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 source ~/.iterm2_shell_integration.bash
 
+# activate ZSH as default shell
+export SHELL=`which zsh`
+[ -z "$ZSH_VERSION" ] && exec "$SHELL" -l

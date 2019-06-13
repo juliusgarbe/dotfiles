@@ -99,4 +99,3 @@ export LC_ALL=en_US.utf8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source ~/.bashrc

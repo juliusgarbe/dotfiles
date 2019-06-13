@@ -1,0 +1,88 @@
+/*This file contains any manual css for this page that needs to override the global styles.
+This is only required when different pages style the same element differently. This is just
+a hack to deal with our current css styles and no new styling should be added in this file.*/
+
+#ipython-main-app {
+    position: relative;
+}
+#jupyter-main-app {
+    position: relative;
+}
+
+
+/* OWN STYLES */
+
+
+/*code box styles*/
+
+.cm-s-ipython.CodeMirror {
+ color: #282828;
+ font-size: 10pt;
+}
+
+
+/*font colors*/
+
+.cm-s-ipython span.cm-comment {
+ color: #9e9b8e;
+ font-style: italic;
+}
+.cm-s-ipython span.cm-atom {
+ color: #ae81ff;
+}
+.cm-s-ipython span.cm-number {
+ color: #ae81ff;
+}
+.cm-s-ipython span.cm-property {
+ color: #282828;
+}
+.cm-s-ipython span.cm-attribute {
+ color: #fd971f;
+}
+.cm-s-ipython span.cm-keyword {
+ color: #f92672;
+ font-weight: bold;
+}
+.cm-s-ipython span.cm-string {
+ color: #268bd2;
+}
+.cm-s-ipython span.cm-meta {
+ color: #fd971f;
+}
+.cm-s-ipython span.cm-operator {
+ color: #fd971f;
+}
+.cm-s-ipython span.cm-builtin {
+ color: #fd971f;
+}
+.cm-s-ipython span.cm-variable {
+ color: #282828;
+}
+.cm-s-ipython span.cm-variable-2 {
+ color: #17a589;
+}
+.cm-s-ipython span.cm-variable-3 {
+ color: #fd971f;
+}
+.cm-s-ipython span.cm-def {
+ color: #17a589;
+ font-weight: bold;
+}
+.cm-s-ipython span.cm-error {
+ background: rgba(249,38,114,.4);
+}
+.cm-s-ipython span.cm-tag {
+ color: #ae81ff;
+}
+.cm-s-ipython span.cm-link {
+ color: #17a589;
+}
+.cm-s-ipython span.cm-storage {
+ color: #ae81ff;
+}
+.cm-s-ipython span.cm-entity {
+ color: #17a589;
+}
+.cm-s-ipython span.cm-quote {
+ color: #268bd2;
+}

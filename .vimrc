@@ -11,24 +11,24 @@ Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 
-" List of available color schemes
-" blue
-" darkblue
-" default +++
-" delek +
-" desert ++
-" elflord +++
-" evening
-" industry ++
-" koehler +
-" morning
-" murphy
-" pablo +++
-" peachpuff +++
-" ron ++
-" shine
-" slate +
-" torte +++
-" zellner
+" List of available color schemes:
+" - blue
+" - darkblue
+" - default
+" - delek
+" - desert
+" - elflord
+" - evening
+" - industry
+" - koehler
+" - morning
+" - murphy
+" - pablo
+" - peachpuff
+" - ron
+" - shine
+" - slate
+" - torte
+" - zellner
 
 colorscheme elflord

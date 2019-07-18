@@ -171,4 +171,5 @@ alias sj="scontrol show job -dd"
 alias sa="sacct"
 alias st="sstat"
 alias su="sclass"
+alias sh="sshare -u garbe -A ace,anthroia,copan,dominoes,ice"
 

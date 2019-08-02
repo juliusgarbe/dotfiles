@@ -150,6 +150,7 @@ alias e="exit"
 alias cdh="cd /home/garbe"
 alias cdt="cd /p/tmp/garbe/projects"
 alias cdp="cd /p/projects/pism/garbe"
+alias cdm="cd /p/projects/pism"
 alias cdd="cd /p/projects/dominoes"
 
 alias pism="cd /home/garbe/pism"
@@ -159,6 +160,16 @@ alias equi="cd /p/tmp/garbe/projects/AIS_Equilibrium"
 alias over="cd /p/tmp/garbe/projects/AIS_Overshoots"
 
 alias cmake_pism="rm -rf build/ && bash CmakePismOnBroadwell.sh"
+
+# git
+alias gstat="git status"
+alias glog="git log --graph --oneline --decorate --all"
+alias gadd="git add"
+alias gdiff="git diff --"
+alias gcomm="git commit"
+alias gpush="git push"
+alias gpull="git pull"
+alias gcp="git commit --verbose && git push"
 
 # slurm
 alias sq="squeue -u garbe -i 1 "

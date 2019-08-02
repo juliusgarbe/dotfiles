@@ -1,7 +1,7 @@
 # Dotfiles
 This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotfiles).
 
-*Warning:* These files contain code which affects the way your system behaves. Do not use blindly unless you know what that entails and only after reviewing the code. Use at own risk. And always remember: with great power comes great responsibility :point_up:.
+**Warning:** These files contain code which affects the way your system behaves. Do not use blindly unless you know what that entails and only after reviewing the code. Use at your own risk! And always remember: with great power comes great responsibility :point_up:.
 
 ## Contents
 
@@ -16,4 +16,4 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 
 ## Author
 
-Copyright Julius Garbe. Licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
+*Copyright* Julius Garbe. Licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).

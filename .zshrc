@@ -126,7 +126,7 @@ alias mp="module purge"
 
 # navigation
 alias ll="ls -AlGhv"
-alias llt="ls -AlGhvt"
+alias llt="ls -AlGhvtr"
 alias ..='cd ../'
 alias ...=../..
 alias ....=../../..

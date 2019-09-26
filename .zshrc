@@ -119,10 +119,10 @@ alias d="display"
 alias du="du -ach"
 alias grep="grep -inR --color"
 
-# modules
-alias ma="module avail"
-alias ml="module list"
-alias mp="module purge"
+# modules (defined in .bashrc)
+#alias ma="module avail"
+#alias ml="module list"
+#alias mp="module purge"
 
 # navigation
 alias ll="ls -AlGhv"

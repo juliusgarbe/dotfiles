@@ -29,6 +29,17 @@ module load pism/stable1.0
 module load git/2.5.0
 module load anaconda/5.0.0
 
-# SQUEUE FORMAT
+# ALIASES
+
+# modules
+alias ma="module avail"
+alias ml="module list"
+alias mp="module purge"
+
+# SET ENVIRONMENT VARIABLES
+
+# squeue format
 export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"
 
+# handle time overlaps when using cdo mergetime
+export SKIP_SAME_TIME=1

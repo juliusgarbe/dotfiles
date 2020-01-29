@@ -77,6 +77,9 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Needed for environment modules
+source $HOME/.bashrc
+
 # You may need to manually set your language environment
 export LANG=en_US.utf8
 export LC_ALL=en_US.utf8
@@ -101,6 +104,12 @@ export LC_ALL=en_US.utf8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 ####
+# FUNCTIONS
+# open multiple .nc files at once (example usage: nm extra 100 200 20)
+nm () {
+	ncview $(for n in {$2..$3..$4}; do echo $1_$n.000.nc; done) &
+}
+
 # ALIASES
 # software
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'

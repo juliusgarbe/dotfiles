@@ -16,4 +16,4 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 
 ## Author
 
-*Copyright* Julius Garbe. Licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
+*Copyright* [Julius Garbe](mailto:julius.garbe@pik-potsdam.de). Licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).

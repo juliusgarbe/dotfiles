@@ -26,7 +26,6 @@ fi
 
 # LOAD MODULES
 module load pism/stable1.0
-module load git/2.5.0
 module load anaconda/5.0.0
 
 # ALIASES
@@ -35,6 +34,7 @@ module load anaconda/5.0.0
 alias ma="module avail"
 alias ml="module list"
 alias mp="module purge"
+alias ms="module show"
 
 # SET ENVIRONMENT VARIABLES
 

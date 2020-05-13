@@ -128,11 +128,13 @@ alias v="vi"
 alias d="display"
 alias du="du -ach"
 alias grep="grep -inR --color"
+alias quota="mmlsquota --block-size T tmp"
 
 # modules (defined in .bashrc)
 #alias ma="module avail"
 #alias ml="module list"
 #alias mp="module purge"
+#alias ms="module show"
 
 # navigation
 alias ll="ls -AlGhv"
@@ -192,5 +194,5 @@ alias sj="scontrol show job -dd"
 alias sa="sacct"
 alias st="sstat"
 alias su="sclass"
-alias sh="sshare -u garbe -A ace,anthroia,copan,dominoes,ice"
+alias sh="sshare -u garbe -A ace,anthroia,copan,dominoes,ice,pism"
 

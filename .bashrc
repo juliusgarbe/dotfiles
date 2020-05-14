@@ -25,7 +25,10 @@ fi
 
 
 # LOAD MODULES
-module load pism/stable1.0
+#module load pism/stable1.0
+module load cdo/1.9.6/gnu-threadsafe
+module load nco/4.7.8
+module load ncview/2.1.6
 module load anaconda/5.0.0
 
 # ALIASES

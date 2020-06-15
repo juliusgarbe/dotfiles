@@ -7,11 +7,15 @@ PATH=.:$PATH:/usr/local/bin:/usr/lpp/X11/bin:/usr/sbin
 PATH=~/.conda/envs/py2/bin:$PATH
 #source activate py2
 
+## fix missing PROJ4 env var for basemap
+#export CONDA_PREFIX=/home/garbe/.conda/envs/py2
+#export PROJ_LIB=$CONDA_PREFIX/share/proj
+
 #  oracle-environment
-if [ -f /usr/local/oracle71/profileoracle/profora71 ]
-then
- . /usr/local/oracle71/profileoracle/profora71;
-fi
+#if [ -f /usr/local/oracle71/profileoracle/profora71 ]
+#then
+# . /usr/local/oracle71/profileoracle/profora71;
+#fi
 
 # Frame Maker 5
 #FMHOME=/usr/local/frame

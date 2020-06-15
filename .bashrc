@@ -28,7 +28,8 @@ fi
 export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"
 
 # handle time overlaps when using cdo mergetime
-export SKIP_SAME_TIME=1
+export SKIPSAMETIME=1 # cdo 1.9.6
+export SKIP_SAME_TIME=1 # older cdo versions
 
 ## fix missing PROJ4 env var for basemap
 #export CONDA_PREFIX=/home/garbe/.conda/envs/py2

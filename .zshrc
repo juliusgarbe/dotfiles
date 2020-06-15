@@ -77,9 +77,6 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# Needed for environment modules
-source $HOME/.bashrc
-
 # You may need to manually set your language environment
 export LANG=en_US.utf8
 export LC_ALL=en_US.utf8
@@ -106,9 +103,18 @@ export LC_ALL=en_US.utf8
 ####
 # FUNCTIONS
 # open multiple .nc files at once (example usage: nm extra 100 200 20)
-nm () {
-	ncview $(for n in {$2..$3..$4}; do echo $1_$n.000.nc; done) &
-}
+nm () { ncview $(for n in {$2..$3..$4}; do echo $1_$n.000.nc; done) & }
+
+# Use environment modules
+module() { eval `/usr/share/Modules/$MODULE_VERSION/bin/modulecmd zsh $*`; }
+
+# DEFAULT LOADED MODULES
+#module load pism/stable1.0
+module load cdo/1.9.6/gnu-threadsafe
+module load intel/2018.1     # required by nco/4.7.8
+module load nco/4.7.8
+module load ncview/2.1.6
+#module load anaconda/5.0.0
 
 # ALIASES
 # software
@@ -131,11 +137,11 @@ alias du="du -ach"
 alias grep="grep -inR --color"
 alias quota="mmlsquota --block-size T tmp"
 
-# modules (defined in .bashrc)
-#alias ma="module avail"
-#alias ml="module list"
-#alias mp="module purge"
-#alias ms="module show"
+# modules
+alias ma="module avail"
+alias ml="module list"
+alias mp="module purge"
+alias ms="module show"
 
 # navigation
 alias ll="ls -AlGhv"

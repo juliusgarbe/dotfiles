@@ -3,10 +3,8 @@
 #
 PATH=.:$PATH:/usr/local/bin:/usr/lpp/X11/bin:/usr/sbin
 
-PATH=$PATH:/usr/lpp/bin
-
 # Custom conda python environment
-#PATH=~/.conda/envs/py2/bin:$PATH
+PATH=~/.conda/envs/py2/bin:$PATH
 #source activate py2
 
 #  oracle-environment
@@ -16,29 +14,28 @@ then
 fi
 
 # Frame Maker 5
-FMHOME=/usr/local/frame
-export FMHOME
-PATH=$PATH:$FMHOME/bin
+#FMHOME=/usr/local/frame
+#export FMHOME
+#PATH=$PATH:$FMHOME/bin
 
 # xgmon
-PATH=$PATH:/usr/lpp/xgmon/bin
-GLIB=/usr/lpp/xgmon/lib
-XGMONFONT=9x15
+#PATH=$PATH:/usr/lpp/xgmon/bin
+#GLIB=/usr/lpp/xgmon/lib
+#XGMONFONT=9x15
 
-#Netscape470
-MOZILLA_HOME=/usr/local/netscape470
-export MOZILLA_HOME
-unset LIBPATH
+# Netscape470
+#MOZILLA_HOME=/usr/local/netscape470
+#export MOZILLA_HOME
+#unset LIBPATH
 
-#GHOSTVIEW
-export GS_LIB=/usr/local/gs
-PATH=$PATH:/usr/lpp/bin
+# GHOSTVIEW
+#export GS_LIB=/usr/local/gs
+#PATH=$PATH:/usr/lpp/bin
 
 # UNIRAS Settings
-#
 #. /usr/local/uniras/6v5a/base/uni.profile
 
-#MATLAB
+# MATLAB
 #MATLAB=/usr/local/matlab
 #PATH=$PATH:$MATLAB/bin
 

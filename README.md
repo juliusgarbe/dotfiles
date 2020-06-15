@@ -6,7 +6,7 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 ## Contents
 
 - `.jupyter/custom/custom.css`: Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom colors and some font styles.
-- `.bashrc`: Configuration file for the Bash Shell. Prepares environment to use [Environment Modules](http://modules.sourceforge.net).
+- `.bashrc`: Configuration file for the Bash Shell. Prepares environment to use [Environment Modules](http://modules.sourceforge.net) and sets various environment variables.
 - `.kshrc`: Configuration file for the [KornShell](http://www.kornshell.org).
 - `.ncviewrc`: Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html).
 - `.profile`: General Bash configurations, like environment variables etc.

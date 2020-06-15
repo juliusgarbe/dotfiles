@@ -8,9 +8,7 @@ else
 fi
 export MODULE_VERSION_STACK
 
-module() { eval `/usr/share/Modules/$MODULE_VERSION/bin/modulecmd zsh $*`; }
-
-MODULESHOME=/usr/share/Modules/3.2.10
+MODULESHOME=/usr/share/Modules/$MODULE_VERSION
 export MODULESHOME
 
 if [ "${LOADEDMODULES:-}" = "" ]; then
@@ -24,22 +22,6 @@ if [ "${MODULEPATH:-}" = "" ]; then
 fi
 
 
-# LOAD MODULES
-#module load pism/stable1.0
-module load cdo/1.9.6/gnu-threadsafe
-module load intel/2018.1     # required by nco/4.7.8
-module load nco/4.7.8
-module load ncview/2.1.6
-module load anaconda/5.0.0
-
-# ALIASES
-
-# modules
-alias ma="module avail"
-alias ml="module list"
-alias mp="module purge"
-alias ms="module show"
-
 # SET ENVIRONMENT VARIABLES
 
 # squeue format
@@ -47,3 +29,7 @@ export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"
 
 # handle time overlaps when using cdo mergetime
 export SKIP_SAME_TIME=1
+
+## fix missing PROJ4 env var for basemap
+#export CONDA_PREFIX=/home/garbe/.conda/envs/py2
+#export PROJ_LIB=$CONDA_PREFIX/share/proj

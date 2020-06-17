@@ -16,8 +16,10 @@ Ncview*foreground:      gray20
 Ncview*background:      LightSteelBlue
 Ncview*PlotXY_canvas*background: LightSteelBlue
 
-! Make variable labels wider
-Ncview*varLabelWidth:    230
+! Make labels wider
+Ncview*labelWidth:      550
+Ncview*varLabelWidth:   234
+Ncview*buttonWidth:     55
 
 ! Reduce the number of variables per row (default: 4)
 Ncview*nVarsPerRow:    2

@@ -41,4 +41,4 @@ For more details, see [here](https://www.atlassian.com/git/tutorials/dotfiles).
 - `.zshrc`: Configuration file for [Oh My Zsh](https://ohmyz.sh). Adds a bunch of custom aliases and custom themes. The [agnoster](https://github.com/agnoster/agnoster-zsh-theme) theme requires [Powerline Fonts](https://github.com/powerline/fonts) to be installed in the terminal in order to render properly.
 
 ## Author
-*Copyright* [Julius Garbe](mailto:julius.garbe@pik-potsdam.de). Licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
+Copyright (c) 2020 [Julius Garbe](mailto:julius.garbe@pik-potsdam.de). Licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).

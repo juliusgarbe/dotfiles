@@ -6,15 +6,21 @@
 ! resources used by all other applications
 !
 
+! *.foreground: #c5c8c6
+! *.background: #1d1f21
 
 ! ncview resources
 ! J. Garbe 06/2020
 
+Ncview*foreground:      gray20
+Ncview*background:      LightSteelBlue
+Ncview*PlotXY_canvas*background: LightSteelBlue
+
 ! Make variable labels wider
-Ncview*varLabelWidth:    350
+Ncview*varLabelWidth:    230
 
 ! Reduce the number of variables per row (default: 4)
-Ncview*nVarsPerRow:    3
+Ncview*nVarsPerRow:    2
 
 ! Do not mask out continents by default (only for lon,lat data)
 Ncview*autoOverlay:    0
@@ -22,11 +28,8 @@ Ncview*autoOverlay:    0
 ! Make the font smaller
 Ncview*font:            -*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
 
+! Use different colors for different variable types
 Ncview*varColors:       0
-Ncview*foreground:      gray20
-Ncview*background:      LightSteelBlue
-Ncview*PlotXY_canvas*background: LightSteelBlue
-
 
 !
 ! aixterm resources

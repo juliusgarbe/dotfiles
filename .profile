@@ -11,6 +11,9 @@ PATH=~/.conda/envs/py2/bin:$PATH
 #export CONDA_PREFIX=/home/garbe/.conda/envs/py2
 #export PROJ_LIB=$CONDA_PREFIX/share/proj
 
+# load X resource file
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+
 #  oracle-environment
 #if [ -f /usr/local/oracle71/profileoracle/profora71 ]
 #then

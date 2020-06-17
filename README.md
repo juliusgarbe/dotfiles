@@ -21,6 +21,12 @@ Set a local flag to hide files that are not explicitly tracked:
 ```
 config config --local status.showUntrackedFiles no
 ```
+After successful execution of the setup any file within the $HOME folder can be version-controlled with normal commands, replacing `git` with the newly created `config` alias, e.g.:
+```
+config status
+config add .bashrc
+config commit -m "Add bashrc"
+```
 For more details, see [here](https://www.atlassian.com/git/tutorials/dotfiles).
 
 ## Contents

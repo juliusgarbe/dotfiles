@@ -3,15 +3,23 @@
 #
 PATH=.:$PATH:/usr/local/bin:/usr/lpp/X11/bin:/usr/sbin
 
-# Custom conda python environment
-PATH=~/.conda/envs/py2/bin:$PATH
-#source activate py2
+## Activate custom conda environment
+conda_env=py2
+#PATH=~/.conda/envs/py2/bin:$PATH
+. /p/system/packages/anaconda/5.0.0/etc/profile.d/conda.sh
+conda activate
+export CONDA_DIR=/home/garbe/.conda
+export CONDA_PREFIX=$CONDA_DIR/envs/$conda_env
+conda activate $conda_env
 
 ## fix missing PROJ4 env var for basemap
-#export CONDA_PREFIX=/home/garbe/.conda/envs/py2
-#export PROJ_LIB=$CONDA_PREFIX/share/proj
+export PROJ_LIB=$CONDA_PREFIX/share/proj
+
+echo ".profile: CONDA_DIR=$CONDA_DIR"
+echo ".profile: CONDA_PREFIX=$CONDA_PREFIX"
 
 # load X resource file
+echo ".profile: DISPLAY=$DISPLAY"
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
 #  oracle-environment

@@ -100,7 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-####
+#######
 # FUNCTIONS
 # open multiple .nc files at once (example usage: nm extra 100 200 20)
 nm () { ncview $(for n in {$2..$3..$4}; do echo $1_$n.000.nc; done) & }
@@ -177,6 +177,7 @@ alias exp="cd /home/garbe/pism_experiments"
 alias hyst="cd /p/tmp/garbe/projects/AIS_StepForcing"
 alias equi="cd /p/tmp/garbe/projects/AIS_Equilibrium"
 alias over="cd /p/tmp/garbe/projects/AIS_Overshoots"
+alias thres="cd /p/tmp/garbe/projects/AIS_Threshold"
 
 alias cmake_pism="rm -rf build/ && bash CmakePismOnBroadwell.sh"
 

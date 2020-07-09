@@ -20,7 +20,8 @@ echo ".profile: CONDA_PREFIX=$CONDA_PREFIX"
 
 # load X resource file
 echo ".profile: DISPLAY=$DISPLAY"
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+#[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+[[ -f ~/.Xresources ]] && xrdb -load -I$HOME ~/.Xresources
 
 #  oracle-environment
 #if [ -f /usr/local/oracle71/profileoracle/profora71 ]

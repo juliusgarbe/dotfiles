@@ -1,7 +1,7 @@
 # Dotfiles
 This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotfiles).
 
-**Warning:** These files contain code which affects the way your system behaves. Do not use blindly unless you know what that entails and only after reviewing the code. Use at your own risk! And always remember: with great power comes great responsibility :point_up:.
+<div class="alert alert-block alert-warning">**Warning:** These files contain code which affects the way your system behaves. Do not use blindly unless you know what that entails and only after reviewing the code. Use at your own risk! And always remember: with great power comes great responsibility :point_up:.</div>
 
 ## Installing and managing dotfiles
 Before installation, make sure to back up already existing configuration files in your $HOME folder if you care about them, so they won't be overwritten by Git. To install, use the following commands (note, that this dotfile repository should be managed as a *bare Git repository*):
@@ -39,6 +39,14 @@ For more details, see [here](https://www.atlassian.com/git/tutorials/dotfiles).
 - `.xinitrc`: Configuration file for the initialization of the [X Server](https://www.x.org/).
 - `.Xresources`: Configuration file for the [X Window System](https://www.x.org/). Also adds some UI customization for *Ncview*.
 - `.zshrc`: Configuration file for [Oh My Zsh](https://ohmyz.sh). Adds a bunch of custom aliases and custom themes. The [agnoster](https://github.com/agnoster/agnoster-zsh-theme) theme requires [Powerline Fonts](https://github.com/powerline/fonts) to be installed in the terminal in order to render properly.
+
+## Git aliases
+Although not included in this repository, I also use some aliases to make Git look prettier and more conventient. If you want, for example, a much prettier looking `git log`, just add the following alias to the global Git config file (`~/.gitconfig`) by copy-pasting this command into your terminal:
+```
+git config --global alias.logg "log --color --graph --pretty=format:'%C(bold yellow)%h%C(reset) - %C(green)[%cr]%C(reset) %s - %C(dim white)%an%C(reset) %C(bold red)%d%C(reset)' --abbrev-commit"
+```
+Now, using the alias `git logg` instead of `git log`, your commit history looks like this:
+![git logg](gitlogg.png)
 
 ## Author
 Copyright (c) 2020 [Julius Garbe](mailto:julius.garbe@pik-potsdam.de). Licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).

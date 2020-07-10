@@ -1,7 +1,7 @@
 # Dotfiles
 This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotfiles).
 
-<div class="alert alert-block alert-warning">**Warning:** These files contain code which affects the way your system behaves. Do not use blindly unless you know what that entails and only after reviewing the code. Use at your own risk! And always remember: with great power comes great responsibility :point_up:.</div>
+**Warning:** These files contain code which affects the way your system behaves. Do not use blindly unless you know what that entails and only after reviewing the code. Use at your own risk! And always remember: with great power comes great responsibility :point_up:.
 
 ## Installing and managing dotfiles
 Before installation, make sure to back up already existing configuration files in your $HOME folder if you care about them, so they won't be overwritten by Git. To install, use the following commands (note, that this dotfile repository should be managed as a *bare Git repository*):

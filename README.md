@@ -24,6 +24,7 @@ Staged changes:
 Unstaged changes:
 ![prompt unstaged changes](prompt2.png)
 
+For more capabilities of the ZSH agnoster theme and tips how to customize the prompt view, see [here](https://github.com/agnoster/agnoster-zsh-theme).
 
 ## Installing and managing dotfiles
 Before installation, make sure to back up already existing configuration files in your $HOME folder if you care about them, so they won't be overwritten by Git. To install, use the following commands (note, that this dotfile repository should be managed as a *bare Git repository*):
@@ -60,4 +61,4 @@ Now, using the alias `git logg` instead of `git log`, your commit history looks 
 ![git logg](gitlogg.png)
 
 ## Author
-Copyright (c) 2020 [Julius Garbe](mailto:julius.garbe@pik-potsdam.de). Licensed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
+Copyright (c) 2020 [Julius Garbe](mailto:julius.garbe@pik-potsdam.de). Licensed under the [MIT License](LICENSE.txt).

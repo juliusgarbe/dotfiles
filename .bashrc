@@ -24,6 +24,10 @@ fi
 
 # SET ENVIRONMENT VARIABLES
 
+# locale
+export LC_ALL=en_US.utf8
+export LANG=en_US.utf8
+
 # squeue format
 export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"
 

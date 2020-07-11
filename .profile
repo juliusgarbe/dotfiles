@@ -58,10 +58,6 @@ echo ".profile: DISPLAY=$DISPLAY"
 # Ergaenzung um ~/.kshrc fuer jede Kornshell zu aktivieren #
 export ENV=$HOME/.kshrc
 
-# Setze locale
-export LC_ALL=en_US.utf8
-export LANG=en_US.utf8
-
 # iTerm2 shell integration
 #test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 #source ~/.iterm2_shell_integration.bash

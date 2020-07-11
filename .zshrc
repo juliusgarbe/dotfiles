@@ -77,7 +77,7 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment (set in .profile)
+# You may need to manually set your language environment (set in .bashrc)
 #export LANG=en_US.utf8
 #export LC_ALL=en_US.utf8
 
@@ -120,7 +120,6 @@ module load ncview/2.1.6
 # software
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias subl="/home/albrecht/software/sublime_text_3/sublime_text"
-#alias nb="/home/garbe/.conda/envs/py2-basemap/bin/jupyter notebook --no-browser --port=8081 --NotebookApp.iopub_data_rate_limit=10000000000"
 alias nb="jupyter notebook --no-browser --port=8081 --NotebookApp.iopub_data_rate_limit=10000000000"
 alias p="python"
 alias nv="ncview -noautoflip -pause_on_restart -small -maxsize 1280,1024"
@@ -130,7 +129,7 @@ alias diff="vimdiff"
 alias less="less -MNS"
 alias o="less"
 alias tail="tail -f"
-alias top="top -c -u garbe"
+alias top="top -c -u $USERNAME"
 alias v="vi"
 alias d="display"
 alias du="du -ach"
@@ -192,7 +191,7 @@ alias gpull="git pull"
 alias gcp="git commit --verbose && git push"
 
 # slurm
-alias sq="squeue -u garbe -i 1 "
+alias sq="squeue -u $USERNAME -i 1 "
 alias sm="smap -i 1"
 alias sv="sview &"
 alias sb="sbatch"
@@ -202,5 +201,5 @@ alias sj="scontrol show job -dd"
 alias sa="sacct"
 alias st="sstat"
 alias su="sclass"
-alias sh="sshare -u garbe -A ace,anthroia,copan,dominoes,ice,pism"
+alias sh="sshare -u $USERNAME -A $(groups | tr ' ' ',')"
 

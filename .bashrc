@@ -39,6 +39,21 @@ export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"
 export SKIPSAMETIME=1 # cdo 1.9.6
 export SKIP_SAME_TIME=1 # older cdo versions
 
+# activate custom conda environment
+conda_env=py2
+#PATH=~/.conda/envs/py2/bin:$PATH
+. /p/system/packages/anaconda/5.0.0/etc/profile.d/conda.sh
+conda activate
+export CONDA_DIR=/home/garbe/.conda
+export CONDA_PREFIX=$CONDA_DIR/envs/$conda_env
+conda activate $conda_env
+
+## fix missing PROJ4 env var for basemap
+export PROJ_LIB=$CONDA_PREFIX/share/proj
+
+echo "*** CONDA_DIR=$CONDA_DIR"
+echo "*** CONDA_PREFIX=$CONDA_PREFIX"
+
 # activate ZSH as default shell
 export SHELL=`which zsh`
 [ -z "$ZSH_VERSION" ] && exec "$SHELL" -l

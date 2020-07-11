@@ -3,10 +3,9 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 
 ## Contents
 - `.jupyter/custom/custom.css`: Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom colors and some font styles.
-- `.bashrc`: Configuration file for the Bash Shell. Prepares environment to use [Environment Modules](http://modules.sourceforge.net) and sets various environment variables.
+- `.bashrc`: General configuration file for the Bash Shell. Prepares environment to use [Environment Modules](http://modules.sourceforge.net) and sets various environment variables as well as some custom stuff.
 - `.kshrc`: Configuration file for the [KornShell](http://www.kornshell.org).
 - `.ncviewrc`: Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html).
-- `.profile`: General Bash configurations, like environment variables etc.
 - `.vimrc`: Configuration file for [Vim](https://www.vim.org). I'm using [vim-plug](https://github.com/junegunn/vim-plug), e.g. for the [Nord](https://www.nordtheme.com/ports/vim) color scheme.
 - `.xinitrc`: Configuration file for the initialization of the [X Server](https://www.x.org/).
 - `.Xresources`: Configuration file for the [X Window System](https://www.x.org/). Also adds some UI customization for *Ncview*.

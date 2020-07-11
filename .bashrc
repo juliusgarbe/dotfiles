@@ -46,13 +46,19 @@ conda_env=py2
 conda activate
 export CONDA_DIR=/home/garbe/.conda
 export CONDA_PREFIX=$CONDA_DIR/envs/$conda_env
+echo "*** CONDA_PREFIX=$CONDA_PREFIX"
 conda activate $conda_env
 
 ## fix missing PROJ4 env var for basemap
 export PROJ_LIB=$CONDA_PREFIX/share/proj
 
-echo "*** CONDA_DIR=$CONDA_DIR"
-echo "*** CONDA_PREFIX=$CONDA_PREFIX"
+# load custom Xresources file
+echo "*** DISPLAY=$DISPLAY"
+[[ -f ~/.Xresources ]] && xrdb -load -I$HOME ~/.Xresources
+
+# iTerm2 shell integration
+#test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+#source ~/.iterm2_shell_integration.bash
 
 # activate ZSH as default shell
 export SHELL=`which zsh`

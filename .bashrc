@@ -1,3 +1,5 @@
+echo "********** BASHRC **********"
+
 # MAKE ZSH AWARE OF ENVIRONMENT MODULES
 if [ "${MODULE_VERSION:-}" = "" ]; then
         MODULE_VERSION_STACK="3.2.10"
@@ -22,7 +24,9 @@ if [ "${MODULEPATH:-}" = "" ]; then
 fi
 
 
+# ********************************************
 # SET ENVIRONMENT VARIABLES
+# ********************************************
 
 # locale
 export LC_ALL=en_US.utf8
@@ -34,3 +38,7 @@ export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"
 # handle time overlaps when using cdo mergetime
 export SKIPSAMETIME=1 # cdo 1.9.6
 export SKIP_SAME_TIME=1 # older cdo versions
+
+# activate ZSH as default shell
+export SHELL=`which zsh`
+[ -z "$ZSH_VERSION" ] && exec "$SHELL" -l

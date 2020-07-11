@@ -1,8 +1,6 @@
 # Dotfiles
 This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotfiles).
 
-> :warning: **WARNING:** These files contain code which affects the way your system behaves. **DO NOT** use blindly unless you know what that entails and only after reviewing the code. Use at your own risk! And always remember: with great power comes great responsibility. :point_up:
-
 ## Contents
 - `.jupyter/custom/custom.css`: Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom colors and some font styles.
 - `.bashrc`: Configuration file for the Bash Shell. Prepares environment to use [Environment Modules](http://modules.sourceforge.net) and sets various environment variables.
@@ -15,8 +13,8 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - `.zshrc`: Configuration file for [Oh My Zsh](https://ohmyz.sh). Adds a bunch of custom aliases and custom themes. The [agnoster](https://github.com/agnoster/agnoster-zsh-theme) theme requires [Powerline Fonts](https://github.com/powerline/fonts) to be installed in the terminal in order to render properly.
 
 ## ZSH
-### Prompt
-Zsh is configured with the following prompt to indicate the current version control worktree status by changing its color:
+#### Prompt
+ZSH is configured with the following prompt to indicate the current version control worktree status by changing its color:
 
 Staged changes:
 ![prompt staged changes](prompt1.png)
@@ -27,6 +25,9 @@ Unstaged changes:
 For more capabilities of the ZSH agnoster theme and tips how to customize the prompt view, see [here](https://github.com/agnoster/agnoster-zsh-theme).
 
 ## Installing and managing dotfiles
+
+> :warning: **WARNING:** These files contain code which affects the way your system behaves. **DO NOT** use blindly unless you know what that entails and only after reviewing the code. Use at your own risk! And always remember: with great power comes great responsibility. :point_up:
+
 Before installation, make sure to back up already existing configuration files in your $HOME folder if you care about them, so they won't be overwritten by Git. To install, use the following commands (note, that this dotfile repository should be managed as a *bare Git repository*):
 ```
 git clone --bare https://github.com/juliusgarbe/dotfiles.git $HOME/.cfg
@@ -60,5 +61,5 @@ git config --global alias.logg "log --color --graph --pretty=format:'%C(bold yel
 Now, using the alias `git logg` instead of `git log`, your commit history looks like this:
 ![git logg](gitlogg.png)
 
-## Author
-Copyright (c) 2020 [Julius Garbe](mailto:julius.garbe@pik-potsdam.de). Licensed under the [MIT License](LICENSE.txt).
+## Authorship
+This repository is maintaned by [Julius Garbe](mailto:julius.garbe@pik-potsdam.de). Unless stated otherwise, the code is licensed under the [MIT License](LICENSE.txt).

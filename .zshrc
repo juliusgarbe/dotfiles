@@ -129,3 +129,11 @@ module load ncview/2.1.6
 if [ -e $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
+
+# hide the "user@hostname" info in the prompt when logged in as oneself on local machine (agnoster theme)
+# more info: https://github.com/agnoster/agnoster-zsh-theme/issues/39#issuecomment-307338817
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}

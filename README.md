@@ -2,6 +2,7 @@
 This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotfiles).
 
 ## Contents
+- `.config/matplotlib/matplotlibrc`: Configuration file for [Matplotlib](https://matplotlib.org/index.html). See [here](https://matplotlib.org/tutorials/introductory/customizing.html) for more information.
 - `.jupyter/custom/custom.css`: Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom colors and some font styles.
 - `.bash_aliases`: Contains all bash alias definitions.
 - `.bashrc`: General configuration file for the Bash Shell. Prepares environment to use [Environment Modules](http://modules.sourceforge.net) and sets various environment variables as well as some custom stuff.

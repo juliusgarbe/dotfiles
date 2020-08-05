@@ -25,6 +25,14 @@ Unstaged changes:
 
 For more capabilities of the ZSH agnoster theme and tips how to customize the prompt view, see [here](https://github.com/agnoster/agnoster-zsh-theme).
 
+## Git aliases
+Although not included in this repository, I also use some aliases to make Git look prettier and more conventient. If you want, for example, a much prettier looking `git log`, just add the following alias to the global Git config file (`~/.gitconfig`) by copy-pasting this command into your terminal:
+```
+git config --global alias.logg "log --color --graph --pretty=format:'%C(bold yellow)%h%C(reset) - %C(green)[%cr]%C(reset) %s - %C(dim white)%an%C(reset) %C(bold red)%d%C(reset)' --abbrev-commit"
+```
+Now, using the alias `git logg` instead of `git log`, your commit history looks like this:
+![git logg](gitlogg.png)
+
 ## Installing and managing dotfiles
 
 > :warning: **WARNING:** These files contain code which affects the way your system behaves. **DO NOT** use blindly unless you know what that entails and only after reviewing the code. Use at your own risk! And always remember: with great power comes great responsibility. :point_up:
@@ -53,14 +61,6 @@ config add .bashrc
 config commit -m "Add bashrc"
 ```
 For more details, see [here](https://www.atlassian.com/git/tutorials/dotfiles).
-
-## Git aliases
-Although not included in this repository, I also use some aliases to make Git look prettier and more conventient. If you want, for example, a much prettier looking `git log`, just add the following alias to the global Git config file (`~/.gitconfig`) by copy-pasting this command into your terminal:
-```
-git config --global alias.logg "log --color --graph --pretty=format:'%C(bold yellow)%h%C(reset) - %C(green)[%cr]%C(reset) %s - %C(dim white)%an%C(reset) %C(bold red)%d%C(reset)' --abbrev-commit"
-```
-Now, using the alias `git logg` instead of `git log`, your commit history looks like this:
-![git logg](gitlogg.png)
 
 ## Authorship
 This repository is maintaned by [Julius Garbe](mailto:julius.garbe@pik-potsdam.de). Unless stated otherwise, the code is licensed under the [MIT License](LICENSE.txt).

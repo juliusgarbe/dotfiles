@@ -18,17 +18,17 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 ZSH is configured with the following prompt to indicate the current version control worktree status by changing its color:
 
 Staged changes:
-![prompt staged changes](prompt1.png)
+![prompt staged changes](images/prompt1.png)
 
 Unstaged changes:
-![prompt unstaged changes](prompt2.png)
+![prompt unstaged changes](images/prompt2.png)
 
 For more capabilities of the ZSH agnoster theme and tips how to customize the prompt view, see [here](https://github.com/agnoster/agnoster-zsh-theme).
 
 ## Vim
 ### vim-airline
 The vim-airline plugin enables a nice and customizable statusline at the bottom of each vim window:
-![vim](vim.png)
+![screenshot vim](images/vim.png)
 
 ## Git aliases
 Although not included in this repository, I also use some aliases to make Git look prettier and more conventient. If you want, for example, a much prettier looking `git log`, just add the following alias to the global Git config file (`~/.gitconfig`) by copy-pasting this command into your terminal:
@@ -36,7 +36,7 @@ Although not included in this repository, I also use some aliases to make Git lo
 git config --global alias.logg "log --color --graph --pretty=format:'%C(bold yellow)%h%C(reset) - %C(green)[%cr]%C(reset) %s - %C(dim white)%an%C(reset) %C(bold red)%d%C(reset)' --abbrev-commit"
 ```
 Now, using the alias `git logg` instead of `git log`, your commit history looks like this:
-![git logg](gitlogg.png)
+![git logg](images/gitlogg.png)
 
 ## Installing and managing dotfiles
 

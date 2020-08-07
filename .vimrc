@@ -1,22 +1,28 @@
 " -----------------------------------------------------
 " Plugins
 "
-" Specify a directory for plugins
-" - Avoid using standard Vim directory names like 'plugin'
+
 call plug#begin(expand('~/.vim/plugged'))
 
-" Nord Vim color scheme
 Plug 'arcticicestudio/nord-vim'
+"Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-" Lighline status line
-Plug 'itchyny/lightline.vim'
-
-" Initialize plugin system
 call plug#end()
 
 " -----------------------------------------------------
-" Nord Vim configuration
+" Nord configuration
 "
+
+let g:nord_cursor_line_number_background = 1
+let g:nord_uniform_status_lines = 1
+let g:nord_bold_vertical_split_line = 1
+let g:nord_uniform_diff_background = 1
+let g:nord_bold = 1
+"let g:nord_italic = 1
+"let g:nord_italic_comments = 1
+
 " List of available color schemes:
 " - blue
 " - darkblue
@@ -36,17 +42,39 @@ call plug#end()
 " - slate
 " - torte
 " - zellner
-colorscheme elflord
+colorscheme nord
 
 " -----------------------------------------------------
 " Lightline configuration
 "
-" Do not show redundant mode info in status line
-set noshowmode
+
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ }
+
+" -----------------------------------------------------
+" Airline configuration
+"
+
+let g:airline_theme='nord'
+let g:airline_powerline_fonts = 1
 
 " -----------------------------------------------------
 " More options
 "
+" Highlight active cursor line
+set cursorline
+
+" Syntax highlighting
+syntax enable
+
+" Show line numbers
+set number
+
+" Do not show redundant mode info in status line when using Airline or
+" Lightline plugin
+set noshowmode
+
 " Always display the status line, even if only one window is displayed
 set laststatus=2
 
@@ -77,3 +105,11 @@ set backspace=indent,eol,start
 " When opening a new line and no filetype-specific indenting is enabled,
 " keep the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
+
+" -----------------------------------------------------
+" Key mappings
+"
+" Normal mode mappings
+
+" Open netcdf header in a new vim vertical split
+nnoremap <leader>nc :vnew<Bar>0r!ncdump -c <C-R>+<CR>

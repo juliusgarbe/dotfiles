@@ -8,7 +8,7 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - `.bashrc`: General configuration file for the Bash Shell. Prepares environment to use [Environment Modules](http://modules.sourceforge.net) and sets various environment variables as well as some custom stuff.
 - `.kshrc`: Configuration file for the [KornShell](http://www.kornshell.org).
 - `.ncviewrc`: Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html).
-- `.vimrc`: Configuration file for [Vim](https://www.vim.org). I'm using [vim-plug](https://github.com/junegunn/vim-plug), e.g. for the [Nord](https://www.nordtheme.com/ports/vim) color scheme and a [beautiful statusline](https://github.com/itchyny/lightline.vim).
+- `.vimrc`: Configuration file for [Vim](https://www.vim.org). I'm using [vim-plug](https://github.com/junegunn/vim-plug), e.g. for the [Nord](https://www.nordtheme.com/ports/vim) color scheme and a [beautiful statusline](https://github.com/vim-airline/vim-airline).
 - `.xinitrc`: Configuration file for the initialization of the [X Server](https://www.x.org/).
 - `.Xresources`: Configuration file for the [X Window System](https://www.x.org/). Also adds some UI customization for *Ncview*.
 - `.zshrc`: Configuration file for [Oh My Zsh](https://ohmyz.sh). Loads custom theme, aliases, functions and more. The [agnoster](https://github.com/agnoster/agnoster-zsh-theme) theme requires [Powerline Fonts](https://github.com/powerline/fonts) to be installed in the terminal in order to render properly.
@@ -24,6 +24,11 @@ Unstaged changes:
 ![prompt unstaged changes](prompt2.png)
 
 For more capabilities of the ZSH agnoster theme and tips how to customize the prompt view, see [here](https://github.com/agnoster/agnoster-zsh-theme).
+
+## Vim
+### vim-airline
+The vim-airline plugin enables a nice and customizable statusline at the bottom of each vim window:
+![vim](vim.png)
 
 ## Git aliases
 Although not included in this repository, I also use some aliases to make Git look prettier and more conventient. If you want, for example, a much prettier looking `git log`, just add the following alias to the global Git config file (`~/.gitconfig`) by copy-pasting this command into your terminal:

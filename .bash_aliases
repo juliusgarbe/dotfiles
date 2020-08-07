@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#echo "********** BASH_ALIASES **********"
+
 # tools & software
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias subl="/home/albrecht/software/sublime_text_3/sublime_text"

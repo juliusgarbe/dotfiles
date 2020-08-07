@@ -79,9 +79,9 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
-# You may need to manually set your language environment (set in .bashrc)
-#export LANG=en_US.utf8
-#export LC_ALL=en_US.utf8
+# You may need to manually set your language environment
+export LANG=en_US.utf8
+export LC_ALL=en_US.utf8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -110,6 +110,11 @@ source $ZSH/oh-my-zsh.sh
 # requires module ncview to be loaded
 nm () { ncview $(for n in {$2..$3..$4}; do echo $1_$n.000.nc; done) & }
 
+# upload a file to the PIK cloud server via curl
+# usage: $ cu USER PASSW FILE TARGETFILE (put PASSW in single quotes)
+# (example usage: cu garbe '***' /path/to/example.file /cloud-path/to/example.file)
+cu () { curl -u $1:'$2' -T $3 "https://cloud.pik-potsdam.de/remote.php/dav/files/$1/$4" }
+
 # Use environment modules
 module() { eval `/usr/share/Modules/$MODULE_VERSION/bin/modulecmd zsh $*`; }
 
@@ -123,6 +128,34 @@ module load nco/4.7.8
 module load ncview/2.1.6
 #module load anaconda/5.0.0
 
+# enable conda
+. /p/system/packages/anaconda/5.0.0/etc/profile.d/conda.sh
+
+# activate custom conda environment
+CONDA_ENV=py2
+export CONDA_DIR=/home/garbe/.conda
+export CONDA_PREFIX=$CONDA_DIR/envs/$CONDA_ENV
+#echo "*** CONDA_PREFIX=$CONDA_PREFIX"
+conda activate $CONDA_ENV
+
+## fix missing PROJ4 env var for basemap
+export PROJ_LIB=$CONDA_PREFIX/share/proj
+
+# squeue format
+export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"
+
+# handle time overlaps when using cdo mergetime
+export SKIPSAMETIME=1 # cdo 1.9.6
+export SKIP_SAME_TIME=1 # older cdo versions
+
+# load custom Xresources file
+#echo "*** DISPLAY=$DISPLAY"
+[[ -f ~/.Xresources ]] && xrdb -load -I$HOME ~/.Xresources
+
+# iTerm2 shell integration
+#test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+#source ~/.iterm2_shell_integration.bash
+
 #
 # ALIASES
 #
@@ -132,8 +165,10 @@ fi
 
 # hide the "user@hostname" info in the prompt when logged in as oneself on local machine (agnoster theme)
 # more info: https://github.com/agnoster/agnoster-zsh-theme/issues/39#issuecomment-307338817
-prompt_context() {
-  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-  fi
-}
+# prompt_context() {
+#   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+#     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+#   fi
+# }
+
+echo "***************************"

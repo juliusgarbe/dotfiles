@@ -7,6 +7,7 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - `.bash_aliases`: Contains all bash alias definitions.
 - `.bash_profile`: General configuration file for the login Bash Shell. Prepares environment to use [Environment Modules](http://modules.sourceforge.net).
 - `.bashrc`: Configuration file for non-login Bash Shells. Currently empty, but custom environment variables might be defined here.
+- `.condarc`: Configuration file for the [Conda](https://docs.conda.io/en/latest/) Python package management system.
 - `.kshrc`: Configuration file for the [KornShell](http://www.kornshell.org).
 - `.ncviewrc`: Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html).
 - `.vimrc`: Configuration file for [Vim](https://www.vim.org). I'm using [vim-plug](https://github.com/junegunn/vim-plug), e.g. for the [Nord](https://www.nordtheme.com/ports/vim) color scheme and a [beautiful statusline](https://github.com/vim-airline/vim-airline).

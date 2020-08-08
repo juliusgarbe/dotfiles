@@ -138,6 +138,11 @@ export CONDA_PREFIX=$CONDA_DIR/envs/$CONDA_ENV
 #echo "*** CONDA_PREFIX=$CONDA_PREFIX"
 conda activate $CONDA_ENV
 
+## Workaround: fancy view of active conda environment in prompt (requires 'changeps1: true' to be set in .condarc)
+## TODO: Fix this
+export CONDA_DEFAULT_ENV="🐍 $CONDA_DEFAULT_ENV"
+conda activate $CONDA_ENV
+
 ## fix missing PROJ4 env var for basemap
 export PROJ_LIB=$CONDA_PREFIX/share/proj
 

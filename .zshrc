@@ -111,9 +111,9 @@ export LC_ALL=en_US.utf8
 nm () { ncview $(for n in {$2..$3..$4}; do echo $1_$n.000.nc; done) & }
 
 # upload a file to the PIK cloud server via curl
-# usage: $ cu USER PASSW FILE TARGETFILE (put PASSW in single quotes)
-# (example usage: cu garbe '***' /path/to/example.file /cloud-path/to/example.file)
-cu () { curl -u $1:'$2' -T $3 "https://cloud.pik-potsdam.de/remote.php/dav/files/$1/$4" }
+# usage: $ cu USER PASSW FILE TARGETFILE (put USER and PASSW in single quotes)
+# (example usage: cu 'garbe' '***' /path/to/example.file /cloud-path/to/example.file)
+cu () { curl -u $1:$2 -T $3 "https://cloud.pik-potsdam.de/remote.php/dav/files/$1/$4" }
 
 # Use environment modules
 module() { eval `/usr/share/Modules/$MODULE_VERSION/bin/modulecmd zsh $*`; }

@@ -3,12 +3,12 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 
 ## Contents
 - `.config/matplotlib/matplotlibrc`: Configuration file for [Matplotlib](https://matplotlib.org/index.html). See [here](https://matplotlib.org/tutorials/introductory/customizing.html) for more information.
-- `.jupyter/custom/custom.css`: Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom colors and some font styles.
+- `.jupyter/custom/custom.css`: Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom UI colors and some font styles.
 - `.bash_aliases`: Contains all bash alias definitions.
-- `.bash_profile`: General configuration file for the [Bash](https://www.gnu.org/software/bash/) login shell. Currently empty, but custom environment variables might be defined here.
-- `.bashrc`: Configuration file for interactive non-login Bash shells. Loads bash aliases and sets the custom shell.
+- `.bash_profile`: General configuration file for the [Bash](https://www.gnu.org/software/bash/) login shell. Sets the prefered custom shell.
+- `.bashrc`: Configuration file for interactive non-login Bash shells. Loads aliases from `.bash_aliases`.
 - `.condarc`: Configuration file for the [Conda](https://docs.conda.io/en/latest/) Python package management system.
-- `.kshrc`: Configuration file for the [KornShell](http://www.kornshell.org).
+- `.kshrc`: Configuration file for the [KornShell](http://www.kornshell.org). Not used.
 - `.ncviewrc`: Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html).
 - `.profile`: General configuration file for the Bash login shell. Only sourced if no `.bash_profile` is present. Currently empty, but custom environment variables might be defined here.
 - `.vimrc`: Configuration file for [Vim](https://www.vim.org). I'm using [vim-plug](https://github.com/junegunn/vim-plug), e.g. for the [Nord](https://www.nordtheme.com/ports/vim) color scheme and a [beautiful statusline](https://github.com/vim-airline/vim-airline).

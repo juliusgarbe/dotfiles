@@ -16,7 +16,4 @@ if [ -f $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
 
-# activate ZSH as default shell
-export SHELL=`which zsh`
-[ -z "$ZSH_VERSION" ] && exec "$SHELL" -l
 

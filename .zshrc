@@ -136,16 +136,16 @@ module load ncview/2.1.6
 . /p/system/packages/anaconda/5.0.0/etc/profile.d/conda.sh
 
 # activate custom conda environment
-CONDA_ENV=py2
+MY_CONDA_ENV=py2
 export CONDA_DIR=/home/garbe/.conda
-export CONDA_PREFIX=$CONDA_DIR/envs/$CONDA_ENV
+export CONDA_PREFIX=$CONDA_DIR/envs/$MY_CONDA_ENV
 #echo "*** CONDA_PREFIX=$CONDA_PREFIX"
-conda activate $CONDA_ENV
+conda activate $MY_CONDA_ENV
 
 ## Workaround: fancy view of active conda environment in prompt (requires 'changeps1: true' to be set in .condarc)
 ## TODO: Fix this
 export CONDA_DEFAULT_ENV="🐍 $CONDA_DEFAULT_ENV"
-conda activate $CONDA_ENV
+conda activate $MY_CONDA_ENV
 
 ## fix missing PROJ4 env var for basemap
 export PROJ_LIB=$CONDA_PREFIX/share/proj
@@ -168,7 +168,8 @@ export SKIP_SAME_TIME=1 # older cdo versions
 #
 # ALIASES
 #
-if [ -e $HOME/.bash_aliases ]; then
+# load aliases, if existing
+if [ -f $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
 

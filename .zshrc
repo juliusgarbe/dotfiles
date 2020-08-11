@@ -106,9 +106,8 @@ export LC_ALL=en_US.utf8
 #
 # FUNCTIONS
 #
-# open multiple netcdf files at once
+# open multiple netcdf files at once (requires module ncview to be loaded)
 # example usage: nm extra 100 200 20
-# (requires module ncview to be loaded)
 function nm () {
   ncview $(for n in {$2..$3..$4}; do echo $1_$n.000.nc; done) &
 }
@@ -119,12 +118,24 @@ function curltocloud () {
   curl -u "garbe":"$1" -T "$2" "https://cloud.pik-potsdam.de/remote.php/dav/files/garbe/$(basename $2)"
 }
 
-# Use environment modules
-module() { eval `/usr/share/Modules/$MODULE_VERSION/bin/modulecmd zsh $*`; }
+# recursively find files (excluding hidden directories and files)
+# example usage: findf "*.pdf"
+function findf () {
+  find -L . -type d -path '*/\.*' -prune -o -not -name '.*' -type f -name $1 -print
+}
+
+# recursively find directories (excluding hidden directories)
+# example usage: findd "*historical*"
+function findd () {
+  find -L . -type d -path '*/\.*' -prune -o -not -name '.*' -type d -name $1 -print
+}
 
 #
 # DEFAULT LOADED MODULES
 #
+# Make ZSH aware of module command
+module() { eval `/usr/share/Modules/$MODULE_VERSION/bin/modulecmd zsh $*`; }
+
 #module load pism/stable1.0
 module load cdo/1.9.6/gnu-threadsafe
 module load intel/2018.1     # required by nco/4.7.8

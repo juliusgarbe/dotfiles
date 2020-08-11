@@ -3,6 +3,7 @@
 #echo "********** BASH_ALIASES **********"
 
 # tools & software
+alias aliases="vi ~/.bash_aliases"
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias subl="/home/albrecht/software/sublime_text_3/sublime_text"
 alias nb="jupyter notebook --no-browser --port=8081 --NotebookApp.iopub_data_rate_limit=10000000000"
@@ -86,4 +87,5 @@ alias sj="scontrol show job -dd"
 alias sa="sacct"
 alias st="sstat"
 alias su="sclass"
-alias sh="sshare -u $USERNAME -A $(groups | tr ' ' ',')"
+#alias sh="sshare -u $USERNAME -A $(groups | tr ' ' ',')"
+alias sh="sshare | \grep -e 'User' -e '$USERNAME'"

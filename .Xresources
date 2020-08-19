@@ -1,20 +1,64 @@
 ! User specified resources for X-applications
-! K. Kramer 04.92
 
 
-!
-! resources used by all other applications
-!
+! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
 
-! *.foreground: #c5c8c6
-! *.background: #1d1f21
+! Project:    Nord XResources
+! Version:    0.1.0
+! Repository: https://github.com/arcticicestudio/nord-xresources
+! License:    MIT
+
+#define nord0 #2E3440
+#define nord1 #3B4252
+#define nord2 #434C5E
+#define nord3 #4C566A
+#define nord4 #D8DEE9
+#define nord5 #E5E9F0
+#define nord6 #ECEFF4
+#define nord7 #8FBCBB
+#define nord8 #88C0D0
+#define nord9 #81A1C1
+#define nord10 #5E81AC
+#define nord11 #BF616A
+#define nord12 #D08770
+#define nord13 #EBCB8B
+#define nord14 #A3BE8C
+#define nord15 #B48EAD
+
+*.foreground:   nord4
+*.background:   nord0
+*.cursorColor:  nord4
+*fading: 35
+*fadeColor: nord3
+
+*.color0: nord1
+*.color1: nord11
+*.color2: nord14
+*.color3: nord13
+*.color4: nord9
+*.color5: nord15
+*.color6: nord8
+*.color7: nord5
+*.color8: nord3
+*.color9: nord11
+*.color10: nord14
+*.color11: nord13
+*.color12: nord9
+*.color13: nord15
+*.color14: nord7
+*.color15: nord6
+
 
 ! ncview resources
 ! J. Garbe 06/2020
 
-Ncview*foreground:      gray20
-Ncview*background:      LightSteelBlue
-Ncview*PlotXY_canvas*background: LightSteelBlue
+! Foreground and background colors
+Ncview*foreground:      nord0
+Ncview*background:      nord9
+Ncview*borderColor:     nord0
+Ncview*highlight:       nord11
+Ncview*PlotXY_canvas*background: nord9
 
 ! Make labels wider
 Ncview*labelWidth:      550
@@ -22,7 +66,7 @@ Ncview*varLabelWidth:   234
 Ncview*buttonWidth:     55
 
 ! Reduce the number of variables per row (default: 4)
-Ncview*nVarsPerRow:    2
+Ncview*nVarsPerRow:     2
 
 ! Do not mask out continents by default (only for lon,lat data)
 Ncview*autoOverlay:    0
@@ -33,141 +77,5 @@ Ncview*font:            -*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
 ! Use different colors for different variable types
 Ncview*varColors:       0
 
-!
-! aixterm resources
-!
-aixterm*font:		Rom17
-aixterm*fontList:	Rom17
-aixterm*Background:	sky blue
-aixterm*Foreground:	black
-
-!
-! XDesktop resources
-!
-xdt3.message.timeout : 1 
-xdt3.triggers.thresholdDownTime : 700
-xdt3.triggers.maxUpTime : 500
-
-!
-! FramMaker resources
-!
-Maker.printerName:		rps
-Maker.zoomPercents:		25,70,100,120,140,160,180,200,400,500
-
-!
-! SAS resources
-!
-SAS.DMSFont:                    Rom17
-SAS.DMSboldFont:		Bld17
-SAS.windowUnitType:             percentage
-SAS.windowHeight:               50
-SAS.windowWidth:                45
-SAS.maxWindowHeight:            95
-SAS.maxWindowWidth:             95
-SAS.awsResizePolicy:            variable
-SAS.xattrPrefix:                Mod1
-
-SAS.sessionGravity:
-SAS.sessionGravityXOffset:      5
-SAS.sessionGravityYOffset:      5
-SAS.xsyncOn:                    False
-
-SAS.markPasteBuffer:
-SAS.defaultPasteBuffer:         XTERM
-SAS.selectTimeout:              60
-
-SAS.iconPath:                  /usr/lib/sas/X11/bitmaps
-
-SAS.useXtColors:                FALSE
-
-SAS.hardKeys:   Ctrl<Key>X: sas-toggle-insert()
-
-!
-! Color Resources:
-!
-
-SAS.foreground:         White
-SAS.background:         Black
-
-SAS.blackForegroundColor:       Black
-SAS.blueForegroundColor:        Blue
-SAS.brownForegroundColor:       #A05050
-SAS.cyanForegroundColor:        #00AAAA
-SAS.grayForegroundColor:        #C0C0C0
-SAS.greenForegroundColor:       Green
-SAS.magentaForegroundColor:     Magenta
-SAS.orangeForegroundColor:      #FF8000
-SAS.pinkForegroundColor:        #FF0080
-SAS.redForegroundColor:         Red
-SAS.whiteForegroundColor:       White
-SAS.yellowForegroundColor:      Yellow
-
-SAS.blackBackgroundColor:       Black
-SAS.blueBackgroundColor:        Blue
-SAS.brownBackgroundColor:       #A05050
-SAS.cyanBackgroundColor:        #00AAAA
-SAS.grayBackgroundColor:        #C0C0C0
-SAS.greenBackgroundColor:       Green
-SAS.magentaBackgroundColor:     Magenta
-SAS.orangeBackgroundColor:      #FF8000
-SAS.pinkBackgroundColor:        #FF0080
-SAS.redBackgroundColor:         Red
-SAS.whiteBackgroundColor:       White
-SAS.yellowBackgroundColor:      Yellow
-
-SAS.functionKeys: \
-   F1=None<Key>F1\n\
-   F2=None<Key>F2\n\
-   F3=None<Key>F3\n\
-   F4=None<Key>F4\n\
-   F5=None<Key>F5\n\
-   F6=None<Key>F6\n\
-   F7=None<Key>F7\n\
-   F8=None<Key>F8\n\
-   F9=None<Key>F9\n\
-   F10=None<Key>F10\n\
-   F11=None<Key>F11\n\
-   F12=None<Key>F12\n\
-   Ctrl A=Ctrl<Key>a\n\
-   Ctrl B=Ctrl<Key>b\n\
-   Ctrl D=Ctrl<Key>d\n\
-   Ctrl E=Ctrl<Key>e\n\
-   Ctrl F=Ctrl<Key>f\n\
-   Ctrl G=Ctrl<Key>g\n\
-   Ctrl H=Ctrl<Key>h\n\
-   Ctrl I=Ctrl<Key>i\n\
-   Ctrl J=Ctrl<Key>j\n\
-   Ctrl K=Ctrl<Key>k\n\
-   Ctrl L=Ctrl<Key>l\n\
-   Ctrl N=Ctrl<Key>n\n\
-   Ctrl R=Ctrl<Key>r\n\
-   Ctrl U=Ctrl<Key>u\n\
-   Ctrl V=Ctrl<Key>v\n\
-   Ctrl W=Ctrl<Key>w\n\
-   KP_0=None<Key>KP_0\n\
-   KP_1=None<Key>KP_1\n\
-   KP_2=None<Key>KP_2\n\
-   KP_3=None<Key>KP_3\n\
-   KP_4=None<Key>KP_4\n\
-   KP_5=None<Key>KP_5\n\
-   KP_6=None<Key>KP_6\n\
-   KP_7=None<Key>KP_7\n\
-   KP_8=None<Key>KP_8\n\
-   KP_9=None<Key>KP_9\n\
-   KP_-=None<Key>KP_Subtract\n\
-   KP_/=None<Key>KP_Divide\n\
-   KP_*=None<Key>KP_Multiply\n\
-   KP_+=None<Key>KP_Add\n\
-   KP_.=None<Key>KP_Decimal\n\
-   KP_Enter=None<Key>KP_Enter\n\
-   Print=None<Key>Print\n\
-   ScrollL=None<Key>Cancel\n\
-   Pause=None<Key>Pause\n\
-   PageUp=None<Key>Prior\n\
-   PageDn=None<Key>Next\n\
-   Home=Home\nEnd=None<Key>End\n\
-   Action=None<Key>Execute\n\
-   Insert=None<Key>Insert
-
-Maker.colorImages:	true
-Maker.captureDelayTime:	10
+! Make lines thicker
+Ncview*borderWidth:     1

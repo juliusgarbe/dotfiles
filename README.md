@@ -13,7 +13,7 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - `.profile`: General configuration file for the Bash login shell. Only sourced if no `.bash_profile` is present. Currently empty, but custom environment variables might be defined here.
 - `.vimrc`: Configuration file for [Vim](https://www.vim.org). I'm using [vim-plug](https://github.com/junegunn/vim-plug), e.g. for the [Nord](https://www.nordtheme.com/ports/vim) color scheme and a [beautiful statusline](https://github.com/vim-airline/vim-airline).
 - `.xinitrc`: Configuration file for the initialization of the [X Server](https://www.x.org/).
-- `.Xresources`: Configuration file for the [X Window System](https://www.x.org/). Also adds some UI customization for *Ncview*.
+- `.Xresources`: Configuration file for the [X Window System](https://www.x.org/). I'm also using the [Nord](https://github.com/arcticicestudio/nord-xresources) color theme here. Also adds some UI customization for *Ncview*.
 - `.zshrc`: Configuration file for [Oh My Zsh](https://ohmyz.sh). Loads custom themes and plugins, and defines some custom functions, environment variables, and more. The [agnoster](https://github.com/agnoster/agnoster-zsh-theme) theme requires [Powerline-patched Fonts](https://github.com/powerline/fonts) to be installed and a unicode-compatible terminal (I use [iTerm2](https://www.iterm2.com)) in order to render properly.
 
 ## ZSH

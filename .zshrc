@@ -1,7 +1,7 @@
 echo "********** ZSHRC **********"
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$PATH:/usr/lpp/X11/bin:/usr/sbin
+export PATH=$PATH:/usr/bin:/usr/sbin
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -170,7 +170,7 @@ export SKIP_SAME_TIME=1 # older cdo versions
 
 # load custom Xresources file
 #echo "*** DISPLAY=$DISPLAY"
-[[ -f ~/.Xresources ]] && xrdb -load -I$HOME ~/.Xresources
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
 # iTerm2 shell integration
 #test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

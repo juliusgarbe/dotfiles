@@ -2,19 +2,19 @@
 This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotfiles).
 
 ## Contents
-- `.config/matplotlib/matplotlibrc`: Configuration file for [Matplotlib](https://matplotlib.org/index.html). See [here](https://matplotlib.org/tutorials/introductory/customizing.html) for more information.
-- `.jupyter/custom/custom.css`: Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom UI colors and some font styles.
-- `.bash_aliases`: Contains all bash alias definitions.
-- `.bash_profile`: General configuration file for the [Bash](https://www.gnu.org/software/bash/) login shell. Sets the prefered custom shell.
-- `.bashrc`: Configuration file for interactive non-login Bash shells. Loads aliases from `.bash_aliases`.
-- `.condarc`: Configuration file for the [Conda](https://docs.conda.io/en/latest/) Python package management system.
-- `.kshrc`: Configuration file for the [KornShell](http://www.kornshell.org). Not used.
-- `.ncviewrc`: Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html).
-- `.profile`: General configuration file for the Bash login shell. Only sourced if no `.bash_profile` is present. Currently empty, but custom environment variables might be defined here.
-- `.vimrc`: Configuration file for [Vim](https://www.vim.org). I'm using [vim-plug](https://github.com/junegunn/vim-plug), e.g. for the [Nord](https://www.nordtheme.com/ports/vim) color scheme and a [beautiful statusline](https://github.com/vim-airline/vim-airline).
-- `.xinitrc`: Configuration file for the initialization of the [X Server](https://www.x.org/).
-- `.Xresources`: Configuration file for the [X Window System](https://www.x.org/). I'm also using the [Nord](https://github.com/arcticicestudio/nord-xresources) color theme here. Also adds some UI customization for *Ncview*.
-- `.zshrc`: Configuration file for [Oh My Zsh](https://ohmyz.sh). Loads custom themes and plugins, and defines some custom functions, environment variables, and more. The [agnoster](https://github.com/agnoster/agnoster-zsh-theme) theme requires [Powerline-patched Fonts](https://github.com/powerline/fonts) to be installed and a unicode-compatible terminal (I use [iTerm2](https://www.iterm2.com)) in order to render properly.
+- [`.config/matplotlib/matplotlibrc`](.config/matplotlib/matplotlibrc): Configuration file for [Matplotlib](https://matplotlib.org/index.html). See [here](https://matplotlib.org/tutorials/introductory/customizing.html) for more information.
+- [`.jupyter/custom/custom.css`](.jupyter/custom/custom.css): Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom UI colors and some font styles.
+- [`.Xresources`](.Xresources): Configuration file for the [X Window System](https://www.x.org/). I'm also using the [Nord](https://github.com/arcticicestudio/nord-xresources) color theme here. Also adds some UI customization for *Ncview*.
+- [`.bash_aliases`](.bash_aliases): Contains all bash alias definitions.
+- [`.bash_profile`](.bash_profile): General configuration file for the [Bash](https://www.gnu.org/software/bash/) login shell. Sets the prefered custom shell.
+- [`.bashrc`](.bashrc): Configuration file for interactive non-login Bash shells. Loads aliases from [`.bash_aliases`](.bash_aliases).
+- [`.condarc`](.condarc): Configuration file for the [Conda](https://docs.conda.io/en/latest/) Python package management system.
+- [`.kshrc`](.kshrc): Configuration file for the [KornShell](http://www.kornshell.org). Not used.
+- [`.ncviewrc`](.ncviewrc): Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html).
+- [`.profile`](.profile): General configuration file for the Bash login shell. Only sourced if no [`.bash_profile`](.bash_profile) is present. Currently empty, but custom environment variables might be defined here.
+- [`.vimrc`](.vimrc): Configuration file for [Vim](https://www.vim.org). I'm using [vim-plug](https://github.com/junegunn/vim-plug), e.g. for the [Nord](https://www.nordtheme.com/ports/vim) color scheme and a [beautiful statusline](https://github.com/vim-airline/vim-airline).
+- [`.xinitrc`](.xinitrc): Configuration file for the initialization of the [X Server](https://www.x.org/). Not used.
+- [`.zshrc`](.zshrc): Configuration file for [Oh My Zsh](https://ohmyz.sh). Loads custom themes and plugins, and defines some custom functions, environment variables, and more. The [agnoster](https://github.com/agnoster/agnoster-zsh-theme) theme requires [Powerline-patched Fonts](https://github.com/powerline/fonts) to be installed and a unicode-compatible terminal (I use [iTerm2](https://www.iterm2.com)) in order to render properly.
 
 ## ZSH
 #### Prompt

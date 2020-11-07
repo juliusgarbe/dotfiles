@@ -2,5 +2,5 @@ ssl_verify: true
 channels:
   - defaults
   - conda-forge
-channel_priority: flexible
+#channel_priority: flexible
 changeps1: true

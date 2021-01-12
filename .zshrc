@@ -153,12 +153,29 @@ export CONDA_PREFIX=$CONDA_DIR/envs/$MY_CONDA_ENV
 #echo "*** CONDA_PREFIX=$CONDA_PREFIX"
 conda activate $MY_CONDA_ENV
 
-## Workaround: fancy view of active conda environment in prompt (requires 'changeps1: true' to be set in .condarc)
-## TODO: Fix this
-export CONDA_DEFAULT_ENV="🐍 $CONDA_DEFAULT_ENV"
-conda activate $MY_CONDA_ENV
+# customize agnoster prompt to show active conda environment (changeps1 should be set to false in .condarc)
+prompt_condaenv() {
+  prompt_segment green $CURRENT_FG "🐍 $CONDA_DEFAULT_ENV"
+}
 
-## fix missing PROJ4 env var for basemap
+## DO NOT CHANGE ANYTHING BELOW!
+build_prompt() {
+  RETVAL=$?
+  prompt_status
+  prompt_condaenv
+  prompt_virtualenv
+  prompt_aws
+  prompt_context
+  prompt_dir
+  prompt_git
+  prompt_bzr
+  prompt_hg
+  prompt_end
+}
+PROMPT='%{%f%b%k%}$(build_prompt) '
+##
+
+# fix missing PROJ4 env var for basemap
 export PROJ_LIB=$CONDA_PREFIX/share/proj
 
 # squeue format

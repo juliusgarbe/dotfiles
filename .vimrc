@@ -111,5 +111,5 @@ set autoindent
 "
 " Normal mode mappings
 
-" This mapping grabs the clipboard register and opens the corresponding netcdf header in a new vim vertical split
-"nnoremap <leader>nc :vnew<Bar>0r!ncdump -c <C-R>+<CR>
+" This mapping grabs the X11 primary clipboard register and opens the corresponding netcdf header in a new vertical split
+"nnoremap <leader>ncd :vnew<Bar>0r!ncdump -h <C-R>*<CR>

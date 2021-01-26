@@ -24,8 +24,8 @@ alias quota="mmlsquota --block-size T tmp"
 
 # modules
 alias ma="module avail"
-alias ml="module list"
-alias mm="module load"
+alias mm="module list"
+alias ml="module load"
 alias mp="module purge"
 alias ms="module show"
 

@@ -71,8 +71,7 @@ syntax enable
 " Show line numbers
 set number
 
-" Do not show redundant mode info in status line when using Airline or
-" Lightline plugin
+" Do not show redundant mode info in status line when using Airline or Lightline plugin
 set noshowmode
 
 " Always display the status line, even if only one window is displayed
@@ -101,15 +100,32 @@ set smartcase
 
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
- 
+
 " When opening a new line and no filetype-specific indenting is enabled,
 " keep the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
+
+" Show invisible characters (except whitespaces)
+" Toggle with :set list/nolist
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 " -----------------------------------------------------
 " Key mappings
 "
 " Normal mode mappings
 
+" Jump to beginning, first non-whitespace character, or end of line
+nnoremap <C-a><C-a> <ESC>0
+nnoremap <C-a> <ESC>^
+nnoremap <C-e> <ESC>$
+
 " This mapping grabs the X11 primary clipboard register and opens the corresponding netcdf header in a new vertical split
 "nnoremap <leader>ncd :vnew<Bar>0r!ncdump -h <C-R>*<CR>
+
+" Insert mode mappings
+
+" Jump to beginning, first non-whitespace character, or end of line
+inoremap <C-a><C-a> <C-o>0
+inoremap <C-a> <C-o>^
+inoremap <C-e> <C-o>$
+

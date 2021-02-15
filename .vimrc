@@ -124,6 +124,9 @@ set pastetoggle=<F2>
 " Toggle line numbers
 noremap <silent> <F1> :set number!<CR>
 
+" Toggle invisible characters
+noremap <silent> <F3> :set list!<CR>
+
 " Jump to beginning, first non-whitespace character, or end of line
 nnoremap <C-a><C-a> <ESC>0
 nnoremap <C-a> <ESC>^
@@ -137,6 +140,9 @@ nnoremap <C-e> <ESC>$
 "
 " Toggle line numbers
 inoremap <silent> <F1> <C-O>:set number!<CR>
+
+" Toggle invisible characters
+inoremap <silent> <F3> <C-O>:set list!<CR>
 
 " Jump to beginning, first non-whitespace character, or end of line
 inoremap <C-a><C-a> <C-o>0

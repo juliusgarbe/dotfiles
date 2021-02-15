@@ -1,7 +1,6 @@
 " -----------------------------------------------------
 " Plugins
 "
-
 call plug#begin(expand('~/.vim/plugged'))
 
 Plug 'arcticicestudio/nord-vim'
@@ -66,7 +65,6 @@ let g:indent_guides_guide_size = 1
 " -----------------------------------------------------
 " More options
 "
-
 " Highlight active cursor line
 set cursorline
 
@@ -117,7 +115,14 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " -----------------------------------------------------
 " Key mappings
 "
+" Toggle paste mode (normal and insert mode)
+set pastetoggle=<F2>
+
+"
 " Normal mode mappings
+"
+" Toggle line numbers
+noremap <silent> <F1> :set number!<CR>
 
 " Jump to beginning, first non-whitespace character, or end of line
 nnoremap <C-a><C-a> <ESC>0
@@ -127,7 +132,11 @@ nnoremap <C-e> <ESC>$
 " This mapping grabs the X11 primary clipboard register and opens the corresponding netcdf header in a new vertical split
 "nnoremap <leader>ncd :vnew<Bar>0r!ncdump -h <C-R>*<CR>
 
+"
 " Insert mode mappings
+"
+" Toggle line numbers
+inoremap <silent> <F1> <C-O>:set number!<CR>
 
 " Jump to beginning, first non-whitespace character, or end of line
 inoremap <C-a><C-a> <C-o>0

@@ -8,20 +8,20 @@ Plug 'arcticicestudio/nord-vim'
 "Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
 
 " -----------------------------------------------------
 " Nord configuration
 "
-
 let g:nord_cursor_line_number_background = 1
 let g:nord_uniform_status_lines = 1
 let g:nord_bold_vertical_split_line = 1
 let g:nord_uniform_diff_background = 1
 let g:nord_bold = 1
-"let g:nord_italic = 1
-"let g:nord_italic_comments = 1
+let g:nord_italic = 1
+let g:nord_italic_comments = 0
 
 " List of available color schemes:
 " - blue
@@ -47,7 +47,6 @@ colorscheme nord
 " -----------------------------------------------------
 " Lightline configuration
 "
-
 let g:lightline = {
       \ 'colorscheme': 'nord',
       \ }
@@ -55,13 +54,19 @@ let g:lightline = {
 " -----------------------------------------------------
 " Airline configuration
 "
-
 let g:airline_theme='nord'
 let g:airline_powerline_fonts = 1
 
 " -----------------------------------------------------
+" Indent guides configuration
+"
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+
+" -----------------------------------------------------
 " More options
 "
+
 " Highlight active cursor line
 set cursorline
 

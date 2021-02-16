@@ -8,6 +8,7 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -61,6 +62,19 @@ let g:airline_powerline_fonts = 1
 "
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
+
+" -----------------------------------------------------
+" Gitgutter configuration
+"
+set updatetime=100
+let g:gitgutter_terminal_reports_focus = 0
+"let g:gitgutter_grep = ''
+let g:gitgutter_enabled = 0
+let g:gitgutter_signs = 1
+let g:gitgutter_highlight_lines = 1
+let g:gitgutter_highlight_linenrs = 1
+let g:gitgutter_log = 0
+"set signcolumn=yes
 
 " -----------------------------------------------------
 " More options
@@ -127,6 +141,9 @@ noremap <silent> <F1> :set number!<CR>
 " Toggle invisible characters
 noremap <silent> <F3> :set list!<CR>
 
+" Toggle GitGutter
+noremap <silent> <F4> :GitGutterToggle<CR>
+
 " Jump to beginning, first non-whitespace character, or end of line
 nnoremap <C-a><C-a> <ESC>0
 nnoremap <C-a> <ESC>^
@@ -143,6 +160,9 @@ inoremap <silent> <F1> <C-O>:set number!<CR>
 
 " Toggle invisible characters
 inoremap <silent> <F3> <C-O>:set list!<CR>
+
+" Toggle GitGutter
+inoremap <silent> <F4> <C-O>:GitGutterToggle<CR>
 
 " Jump to beginning, first non-whitespace character, or end of line
 inoremap <C-a><C-a> <C-o>0

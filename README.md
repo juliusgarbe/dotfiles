@@ -29,9 +29,22 @@ Unstaged changes:
 For more capabilities of the ZSH agnoster theme and tips how to customize the prompt view, see [here](https://github.com/agnoster/agnoster-zsh-theme).
 
 ## Vim
+### nord-vim
+I'm using the beautiful [Nord](https://www.nordtheme.com/ports/vim) vim color theme.
+
 ### vim-airline
-The vim-airline plugin enables a nice and customizable statusline at the bottom of each vim window:
+The [vim-airline](https://github.com/vim-airline/vim-airline) plugin enables a nice and customizable statusline at the bottom of each vim window:
 ![screenshot vim](images/vim.png)
+
+### Mappings
+Some convenient key mappings I use:
+
+| Key | Mapping | Normal mode | Insert mode |
+| --- | ------- | ----------- | ----------- |
+| `F1` | Toggle line numbers | :heavy_check_mark: | :heavy_check_mark: |
+| `F2` | Toggle paste mode | :heavy_check_mark: | :heavy_check_mark: |
+| `F3` | Toggle invisible characters | :heavy_check_mark: | :heavy_check_mark: |
+| `F4` | Toggle [vim-gitgutter](https://github.com/airblade/vim-gitgutter) | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Git aliases
 Although not included in this repository, I also use some aliases to make Git look prettier and more conventient. If you want, for example, a much prettier looking `git log`, just add the following alias to the global Git config file (`~/.gitconfig`) by copy-pasting this command into your terminal:

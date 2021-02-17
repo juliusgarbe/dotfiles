@@ -123,7 +123,7 @@ set backspace=indent,eol,start
 set autoindent
 
 " Show invisible characters (except whitespaces)
-" Toggle with :set list/nolist
+" Toggle with :set list!
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
 " -----------------------------------------------------

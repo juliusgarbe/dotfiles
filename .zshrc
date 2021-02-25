@@ -178,12 +178,16 @@ PROMPT='%{%f%b%k%}$(build_prompt) '
 # fix missing PROJ4 env var for basemap
 export PROJ_LIB=$CONDA_PREFIX/share/proj
 
-# squeue format
+# slurm settings
 export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"
+export SACCT_FORMAT="JobID,JobName,Account,QOS,Timelimit,NNodes,AllocCPUS,Elapsed,State,ExitCode,DerivedExitcode"
 
 # handle time overlaps when using cdo mergetime
 export SKIPSAMETIME=1 # cdo 1.9.6
 export SKIP_SAME_TIME=1 # older cdo versions
+
+# set location of X applications default resources
+export XAPPLRESDIR=~/.app-defaults
 
 # load custom Xresources file
 #echo "*** DISPLAY=$DISPLAY"

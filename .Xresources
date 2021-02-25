@@ -54,14 +54,25 @@
 ! J. Garbe 06/2020
 
 ! Foreground and background colors
-Ncview*foreground:      nord0
-Ncview*background:      nord9
-Ncview*borderColor:     nord0
+Ncview*foreground:      nord4
+Ncview*background:      nord2
+Ncview*borderColor:     nord4
 Ncview*highlight:       nord11
-Ncview*PlotXY_canvas*background: nord9
+Ncview*PlotXY_canvas*background: nord2
+
+! Use different colors for different variable dimension types
+Ncview*varColors:       1
+
+! Code dimentionality of variables
+Ncview*foreground1d:	nord4
+Ncview*foreground2d:	nord14
+Ncview*foreground3d:	nord13
+Ncview*foreground4d:	nord12
+Ncview*foreground5d:	nord11
 
 ! Make labels wider
 Ncview*labelWidth:      550
+Ncview*dimLabelWidth:	95
 Ncview*varLabelWidth:   234
 Ncview*buttonWidth:     55
 
@@ -73,9 +84,8 @@ Ncview*autoOverlay:    0
 
 ! Make the font smaller
 Ncview*font:            -*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
-
-! Use different colors for different variable types
-Ncview*varColors:       0
+Ncview*PlotXY_canvas*font:     -*-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+!Ncview*axisfont:        10
 
 ! Make lines thicker
 Ncview*borderWidth:     1

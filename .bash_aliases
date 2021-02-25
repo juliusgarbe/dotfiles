@@ -8,7 +8,7 @@ alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias subl="/home/albrecht/software/sublime_text_3/sublime_text"
 alias nb="jupyter notebook --no-browser --port=8081 --NotebookApp.iopub_data_rate_limit=10000000000"
 alias p="python"
-alias nv="ncview -noautoflip -pause_on_restart -small -maxsize 1280,1024"
+alias nv="ncview -noautoflip -pause_on_restart -small -maxsize 75" #maxsize: in percent #1280,1024
 alias ncdump="/p/system/packages/anaconda/2.3.0/bin/ncdump"
 alias nd="ncdump -h"
 alias ndv="ncdump -v"
@@ -65,6 +65,7 @@ alias hyst="cd /p/tmp/garbe/projects/AIS_StepForcing"
 alias equi="cd /p/tmp/garbe/projects/AIS_Equilibrium"
 alias over="cd /p/tmp/garbe/projects/AIS_Overshoots"
 alias thres="cd /p/tmp/garbe/projects/AIS_Threshold"
+alias data="cd /p/projects/pism/garbe/2018_PISM_Input_Data"
 
 alias cmake_pism="rm -rf build/ && bash CmakePismOnBroadwell.sh"
 

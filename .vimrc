@@ -80,6 +80,8 @@ let g:gitgutter_log = 0
 " -----------------------------------------------------
 " More options
 "
+set encoding=utf-8 " needed for Airline and emojis
+
 " Fix italics escape codes
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"

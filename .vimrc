@@ -21,7 +21,8 @@ let g:nord_bold_vertical_split_line = 1
 let g:nord_uniform_diff_background = 1
 let g:nord_bold = 1
 let g:nord_italic = 1
-let g:nord_italic_comments = 0
+let g:nord_italic_comments = 1
+let g:nord_underline = 1
 
 " List of available color schemes:
 " - blue
@@ -79,6 +80,10 @@ let g:gitgutter_log = 0
 " -----------------------------------------------------
 " More options
 "
+" Fix italics escape codes
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
+
 " Highlight active cursor line
 set cursorline
 

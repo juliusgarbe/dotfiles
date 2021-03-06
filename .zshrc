@@ -144,13 +144,12 @@ module load ncview/2.1.6
 #module load anaconda/5.0.0
 
 # enable conda
-. /p/system/packages/anaconda/5.0.0/etc/profile.d/conda.sh
+. /p/system/packages/anaconda/5.0.0_py3/etc/profile.d/conda.sh
 
 # activate custom conda environment
 MY_CONDA_ENV=py2
 export CONDA_DIR=/home/garbe/.conda
 export CONDA_PREFIX=$CONDA_DIR/envs/$MY_CONDA_ENV
-#echo "*** CONDA_PREFIX=$CONDA_PREFIX"
 conda activate $MY_CONDA_ENV
 
 # customize agnoster prompt to show active conda environment (changeps1 should be set to false in .condarc)
@@ -190,6 +189,7 @@ export SKIP_SAME_TIME=1 # older cdo versions
 export XAPPLRESDIR=~/.app-defaults
 
 # load custom Xresources file
+#export DISPLAY=${DISPLAY}.2 # doesn't work...
 #echo "*** DISPLAY=$DISPLAY"
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 

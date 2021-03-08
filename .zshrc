@@ -136,12 +136,14 @@ function findd () {
 # Make ZSH aware of module command
 module() { eval `/usr/share/Modules/$MODULE_VERSION/bin/modulecmd zsh $*`; }
 
+# initial module loads
 #module load pism/stable1.0
-module load cdo/1.9.6/gnu-threadsafe
-module load intel/2018.1     # required by nco/4.7.8
-module load nco/4.7.8
-module load ncview/2.1.6
-#module load anaconda/5.0.0
+module load cdo
+module load intel/2018.1     # required by nco
+module load nco
+module load ncview
+module load netcdf
+#module load anaconda
 
 # enable conda
 . /p/system/packages/anaconda/5.0.0_py3/etc/profile.d/conda.sh
@@ -178,8 +180,8 @@ PROMPT='%{%f%b%k%}$(build_prompt) '
 export PROJ_LIB=$CONDA_PREFIX/share/proj
 
 # NetCDF libraries for Fortran compiler
-export NETCDF_INC=/p/system/packages/netcdf-fortran/4.4.4/intel/serial/include
-export NETCDF_LIB=/p/system/packages/netcdf-fortran/4.4.4/intel/serial/lib
+export NETCDF_INC=/p/system/packages/netcdf/4.1.3/intel/16.0.0/serial/include
+export NETCDF_LIB=/p/system/packages/netcdf/4.1.3/intel/16.0.0/serial/lib
 
 # slurm settings
 export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"

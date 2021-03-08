@@ -177,6 +177,10 @@ PROMPT='%{%f%b%k%}$(build_prompt) '
 # fix missing PROJ4 env var for basemap
 export PROJ_LIB=$CONDA_PREFIX/share/proj
 
+# NetCDF libraries for Fortran compiler
+export NETCDF_INC=/p/system/packages/netcdf-fortran/4.4.4/intel/serial/include
+export NETCDF_LIB=/p/system/packages/netcdf-fortran/4.4.4/intel/serial/lib
+
 # slurm settings
 export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"
 export SACCT_FORMAT="JobID,JobName,Account,QOS,Timelimit,NNodes,AllocCPUS,Elapsed,State,ExitCode,DerivedExitcode"

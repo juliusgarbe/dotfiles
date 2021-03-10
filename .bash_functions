@@ -26,3 +26,14 @@ function findd () {
   find -L . -type d -path '*/\.*' -prune -o -not -name '.*' -type d -iname $1 -print
 }
 
+# start jupyter notebook on cluster nodes via slurm submission
+function snb () {
+  logfile=~/jupyter_launch.log #TODO: forward logfile name to submission script
+  [ -f $logfile ] && rm -f $logfile # delete old logfile if it exists
+  sbatch ~/scripts/Cluster/launch_jupyter_on_cluster.submit # submit job to slurm
+  echo -n "Waiting for notebook to start"
+  while [ ! -s $logfile ] ; do echo -n "." ; sleep 0.2 ; done # wait for the logfile to appear and be not-empty
+  echo ""
+  tail -f -n 12 $logfile # show last 12 lines to see full logfile. Change value according to number of printed lines in submission script.
+}
+

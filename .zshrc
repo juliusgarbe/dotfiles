@@ -195,21 +195,16 @@ export SKIP_SAME_TIME=1 # older cdo versions
 export XAPPLRESDIR=~/.app-defaults
 
 # load custom Xresources file
-#export DISPLAY=${DISPLAY}.2 # doesn't work...
-#echo "*** DISPLAY=$DISPLAY"
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-
-# iTerm2 shell integration
-#test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
-#source ~/.iterm2_shell_integration.bash
+[[ -f $HOME/.Xresources ]] && xrdb -merge $HOME/.Xresources
 
 #
-# ALIASES
+# ALIASES & FUNTIONS
 #
-# load aliases, if existing
-if [ -f $HOME/.bash_aliases ]; then
-    source $HOME/.bash_aliases
-fi
+# load aliases
+[[ -f $HOME/.bash_aliases ]] && source $HOME/.bash_aliases
+
+# load functions
+[[ -f $HOME/.bash_functions ]] && source $HOME/.bash_functions
 
 # hide the "user@hostname" info in the prompt when logged in as oneself on local machine (agnoster theme)
 # more info: https://github.com/agnoster/agnoster-zsh-theme/issues/39#issuecomment-307338817

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#echo "********** BASH_ALIASES **********"
+# ALIASES
 
 # tools & software
 alias aliases="vi ~/.bash_aliases"

@@ -121,13 +121,13 @@ function curltocloud () {
 # recursively find files (excluding hidden directories and files)
 # example usage: findf "*.pdf"
 function findf () {
-  find -L . -type d -path '*/\.*' -prune -o -not -name '.*' -type f -name $1 -print
+  find -L . -type d -path '*/\.*' -prune -o -not -name '.*' -type f -iname $1 -print
 }
 
 # recursively find directories (excluding hidden directories)
 # example usage: findd "*historical*"
 function findd () {
-  find -L . -type d -path '*/\.*' -prune -o -not -name '.*' -type d -name $1 -print
+  find -L . -type d -path '*/\.*' -prune -o -not -name '.*' -type d -iname $1 -print
 }
 
 #

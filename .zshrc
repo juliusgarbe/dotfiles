@@ -103,36 +103,9 @@ export LC_ALL=en_US.utf8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 #################
-#
-# FUNCTIONS
-#
-# open multiple netcdf files at once (requires module ncview to be loaded)
-# example usage: nm extra 100 200 20
-function nm () {
-  ncview $(for n in {$2..$3..$4}; do echo $1_$n.000.nc; done) &
-}
+# ENVIRONMENT MODULES
+#################
 
-# upload a file to the PIK cloud server via curl
-# example usage: curltocloud '***' ~/path/to/examplefile (put password in single quotes)
-function curltocloud () {
-  curl -u "garbe":"$1" -T "$2" "https://cloud.pik-potsdam.de/remote.php/dav/files/garbe/$(basename $2)"
-}
-
-# recursively find files (excluding hidden directories and files)
-# example usage: findf "*.pdf"
-function findf () {
-  find -L . -type d -path '*/\.*' -prune -o -not -name '.*' -type f -iname $1 -print
-}
-
-# recursively find directories (excluding hidden directories)
-# example usage: findd "*historical*"
-function findd () {
-  find -L . -type d -path '*/\.*' -prune -o -not -name '.*' -type d -iname $1 -print
-}
-
-#
-# DEFAULT LOADED MODULES
-#
 # Make ZSH aware of module command
 module() { eval `/usr/share/Modules/$MODULE_VERSION/bin/modulecmd zsh $*`; }
 
@@ -145,6 +118,42 @@ module load ncview
 module load netcdf
 #module load anaconda
 
+#################
+# ALIASES & FUNTIONS
+#################
+
+# load aliases
+[[ -f $HOME/.bash_aliases ]] && source $HOME/.bash_aliases
+
+# load functions
+[[ -f $HOME/.bash_functions ]] && source $HOME/.bash_functions
+
+# load custom Xresources file
+[[ -f $HOME/.Xresources ]] && xrdb -merge $HOME/.Xresources
+
+#################
+# ENVIRONMENT VARIABLES
+#################
+
+# NetCDF libraries for Fortran compiler
+export NETCDF_INC=/p/system/packages/netcdf/4.1.3/intel/16.0.0/serial/include
+export NETCDF_LIB=/p/system/packages/netcdf/4.1.3/intel/16.0.0/serial/lib
+
+# slurm settings
+export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"
+export SACCT_FORMAT="JobID,JobName,Account,QOS,Timelimit,NNodes,AllocCPUS,Elapsed,State,ExitCode,DerivedExitcode"
+
+# handle time overlaps when using cdo mergetime
+export SKIPSAMETIME=1 # cdo 1.9.6
+export SKIP_SAME_TIME=1 # older cdo versions
+
+# set location of X applications default resources
+export XAPPLRESDIR=~/.app-defaults
+
+#################
+# CONDA ENVIRONMENT
+#################
+
 # enable conda
 . /p/system/packages/anaconda/5.0.0_py3/etc/profile.d/conda.sh
 
@@ -153,6 +162,21 @@ MY_CONDA_ENV=py2
 export CONDA_DIR=/home/garbe/.conda
 export CONDA_PREFIX=$CONDA_DIR/envs/$MY_CONDA_ENV
 conda activate $MY_CONDA_ENV
+
+# fix missing PROJ4 env var for basemap
+export PROJ_LIB=$CONDA_PREFIX/share/proj
+
+#################
+# CUSTOM PROMPT
+#################
+
+# hide the "user@hostname" info in the prompt when logged in as oneself on local machine (agnoster theme)
+# more info: https://github.com/agnoster/agnoster-zsh-theme/issues/39#issuecomment-307338817
+# prompt_context() {
+#   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+#     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+#   fi
+# }
 
 # customize agnoster prompt to show active conda environment (changeps1 should be set to false in .condarc)
 prompt_condaenv() {
@@ -175,43 +199,5 @@ build_prompt() {
 }
 PROMPT='%{%f%b%k%}$(build_prompt) '
 ##
-
-# fix missing PROJ4 env var for basemap
-export PROJ_LIB=$CONDA_PREFIX/share/proj
-
-# NetCDF libraries for Fortran compiler
-export NETCDF_INC=/p/system/packages/netcdf/4.1.3/intel/16.0.0/serial/include
-export NETCDF_LIB=/p/system/packages/netcdf/4.1.3/intel/16.0.0/serial/lib
-
-# slurm settings
-export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"
-export SACCT_FORMAT="JobID,JobName,Account,QOS,Timelimit,NNodes,AllocCPUS,Elapsed,State,ExitCode,DerivedExitcode"
-
-# handle time overlaps when using cdo mergetime
-export SKIPSAMETIME=1 # cdo 1.9.6
-export SKIP_SAME_TIME=1 # older cdo versions
-
-# set location of X applications default resources
-export XAPPLRESDIR=~/.app-defaults
-
-# load custom Xresources file
-[[ -f $HOME/.Xresources ]] && xrdb -merge $HOME/.Xresources
-
-#
-# ALIASES & FUNTIONS
-#
-# load aliases
-[[ -f $HOME/.bash_aliases ]] && source $HOME/.bash_aliases
-
-# load functions
-[[ -f $HOME/.bash_functions ]] && source $HOME/.bash_functions
-
-# hide the "user@hostname" info in the prompt when logged in as oneself on local machine (agnoster theme)
-# more info: https://github.com/agnoster/agnoster-zsh-theme/issues/39#issuecomment-307338817
-# prompt_context() {
-#   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-#     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-#   fi
-# }
 
 echo "***************************"

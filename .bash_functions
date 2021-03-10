@@ -27,8 +27,9 @@ function findd () {
 }
 
 # start jupyter notebook on cluster nodes via slurm submission
+#TODO: forward file name to submission script
 function snb () {
-  logfile=~/jupyter_launch.log #TODO: forward logfile name to submission script
+  logfile=~/.jupyter_launch.log
   [ -f $logfile ] && rm -f $logfile # delete old logfile if it exists
   sbatch ~/scripts/Cluster/launch_jupyter_on_cluster.submit # submit job to slurm
   echo -n "Waiting for notebook to start"

@@ -10,10 +10,7 @@ case $- in
       *) return;;
 esac
 
-
-# load aliases, if existing
-if [ -f $HOME/.bash_aliases ]; then
-    source $HOME/.bash_aliases
-fi
-
+# load aliases & functions
+[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
+[ -f $HOME/.bash_functions ] && source $HOME/.bash_functions
 

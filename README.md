@@ -20,13 +20,16 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 
 ## ZSH
 #### Prompt
-ZSH is configured with the following prompt to indicate the current version control worktree status by changing its color:
-
-Staged changes:
-![prompt staged changes](images/prompt1.png)
+ZSH is configured with the following prompt to indicate the active conda environment as well as the current version control worktree status by changing its color:
 
 Unstaged changes:
-![prompt unstaged changes](images/prompt2.png)
+![prompt unstaged changes](images/prompt1.png)
+
+Staged changes:
+![prompt staged changes](images/prompt2.png)
+
+Clean worktree:
+![prompt clean worktree](images/prompt3.png)
 
 For more capabilities of the ZSH agnoster theme and tips how to customize the prompt view, see [here](https://github.com/agnoster/agnoster-zsh-theme).
 

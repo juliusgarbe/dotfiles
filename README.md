@@ -3,13 +3,13 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 
 ## Contents
 - [`.app-defaults`](.app-defaults): Contains [X applications](https://www.x.org/) default resources.
-- [`.config/matplotlib/matplotlibrc`](.config/matplotlib/matplotlibrc): Configuration file for [Matplotlib](https://matplotlib.org/index.html). See [here](https://matplotlib.org/tutorials/introductory/customizing.html) for more information.
+- [`.config/matplotlib/matplotlibrc`](.config/matplotlib/matplotlibrc): Configuration file for [Matplotlib](https://matplotlib.org/index.html). See [here](https://matplotlib.org/stable/tutorials/introductory/customizing.html) for more information.
 - [`.jupyter/custom/custom.css`](.jupyter/custom/custom.css): Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom UI colors and some font styles.
 - [`.Xresources`](.Xresources): Configuration file for the [X Window System](https://www.x.org/). I'm using the pretty [Nord](https://github.com/arcticicestudio/nord-xresources) color theme. Also adds some UI customization for *Ncview*.
 - [`.bash_aliases`](.bash_aliases): Contains all personal bash alias definitions.
 - [`.bash_functions`](.bash_functions): Contains all personal bash functions.
 - [`.bash_profile`](.bash_profile): General configuration file for the [Bash](https://www.gnu.org/software/bash/) login shell. Sets the prefered custom shell.
-- [`.bashrc`](.bashrc): Configuration file for interactive non-login Bash shells. Loads aliases from `.bash_aliases`.
+- [`.bashrc`](.bashrc): Configuration file for interactive non-login Bash shells. Loads aliases from `.bash_aliases` and functions from `.bash_functions`.
 - [`.condarc`](.condarc): Configuration file for the [Conda](https://docs.conda.io/en/latest/) Python package management system.
 - [`.kshrc`](.kshrc): Configuration file for the [KornShell](http://www.kornshell.org). Not used.
 - [`.ncviewrc`](.ncviewrc): Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html).

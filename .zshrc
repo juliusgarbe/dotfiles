@@ -110,12 +110,14 @@ export LC_ALL=en_US.utf8
 module() { eval `/usr/share/Modules/$MODULE_VERSION/bin/modulecmd zsh $*`; }
 
 # initial module loads
+NETCDF_VERSION=netcdf/4.1.3/intel/16.0.0/serial
 #module load pism/stable1.0
 module load cdo
 module load intel/2018.1     # required by nco
 module load nco
 module load ncview
-module load netcdf
+#module load netcdf
+module load $NETCDF_VERSION
 #module load anaconda
 
 #################
@@ -136,8 +138,8 @@ module load netcdf
 #################
 
 # NetCDF libraries for Fortran compiler
-export NETCDF_INC=/p/system/packages/netcdf/4.1.3/intel/16.0.0/serial/include
-export NETCDF_LIB=/p/system/packages/netcdf/4.1.3/intel/16.0.0/serial/lib
+export NETCDF_INC=/p/system/packages/$NETCDF_VERSION/include
+export NETCDF_LIB=/p/system/packages/$NETCDF_VERSION/lib
 
 # slurm settings
 export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"

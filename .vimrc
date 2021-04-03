@@ -9,6 +9,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'airblade/vim-gitgutter'
+Plug '~/.fzf'
 
 call plug#end()
 
@@ -76,6 +77,11 @@ let g:gitgutter_highlight_lines = 1
 let g:gitgutter_highlight_linenrs = 1
 let g:gitgutter_log = 0
 "set signcolumn=yes
+
+" -----------------------------------------------------
+" FZF configuration
+"
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 
 " -----------------------------------------------------
 " More options

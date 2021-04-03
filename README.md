@@ -39,10 +39,11 @@ I'm using [FZF](https://github.com/junegunn/fzf). It's great. See yourself!
 ### Plugins
 #### Autosuggestions
 Adds type-ahead [autocomplete suggestions](https://github.com/marlonrichert/zsh-autocomplete) based on the command history:
+
 ![autosuggestions](images/autosuggestions.png)
 
-#### [Syntax highlightling](https://github.com/zsh-users/zsh-syntax-highlighting)
-Commands turn green if typed right, red if not, and files & folders get underlined if existing.
+#### Syntax highlightling
+The [zsh-syntax-highlightling](https://github.com/zsh-users/zsh-syntax-highlighting) plugin makes commands turn green if typed right, red if not, while files & folders get underlined if existing.
 
 ## Vim
 ### Plugins

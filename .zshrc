@@ -71,7 +71,11 @@ HIST_STAMPS="mm.dd.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=()
+plugins=(
+  fzf
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,6 +136,9 @@ module load $NETCDF_VERSION
 
 # load custom Xresources file
 [[ -f $HOME/.Xresources ]] && xrdb -merge $HOME/.Xresources
+
+# load fzf auto-completion and key bindings
+[[ -f $HOME/.fzf.zsh ]] && source $HOME/.fzf.zsh
 
 #################
 # ENVIRONMENT VARIABLES

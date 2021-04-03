@@ -19,7 +19,7 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - [`.zshrc`](.zshrc): Configuration file for [Oh My Zsh](https://ohmyz.sh). Loads custom themes and plugins, and defines some custom functions, environment variables, and more. The [agnoster](https://github.com/agnoster/agnoster-zsh-theme) theme requires [Powerline-patched Fonts](https://github.com/powerline/fonts) to be installed and a unicode-compatible terminal (I use [iTerm2](https://www.iterm2.com)) in order to render properly.
 
 ## ZSH
-#### Prompt
+### Prompt
 ZSH is configured with the following prompt to indicate the active conda environment as well as the current version control worktree status by changing its color:
 
 Unstaged changes:
@@ -32,6 +32,17 @@ Clean worktree:
 ![prompt clean worktree](images/prompt3.png)
 
 For more capabilities of the ZSH agnoster theme and tips how to customize the prompt view, see [here](https://github.com/agnoster/agnoster-zsh-theme).
+
+### [FZF](https://github.com/junegunn/fzf)
+It's great. See yourself!
+
+### Plugins
+#### [Autosuggestions](https://github.com/marlonrichert/zsh-autocomplete)
+Adds type-ahead autocomplete suggestions based on the command history:
+![autosuggestions](images/autosuggestions.png)
+
+#### [Syntax highlightling](https://github.com/zsh-users/zsh-syntax-highlighting)
+Commands turn green if typed right, red if not, and files & folders get underlined if existing.
 
 ## Vim
 ### nord-vim

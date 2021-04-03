@@ -12,6 +12,7 @@ alias nv="ncview -noautoflip -pause_on_restart -small -maxsize 75" #maxsize: in 
 alias ncdump="/p/system/packages/anaconda/2.3.0/bin/ncdump"
 alias nd="ncdump -h"
 alias ndv="ncdump -v"
+alias ndiff="ncdiff"
 alias diff="vimdiff"
 alias less="less -MNS"
 alias o="less"

@@ -140,6 +140,9 @@ module load $NETCDF_VERSION
 # load fzf auto-completion and key bindings
 [[ -f $HOME/.fzf.zsh ]] && source $HOME/.fzf.zsh
 
+# load cdo auto-completion
+[[ -f $HOME/.cdoCompletion.zsh ]] && source $HOME/.cdoCompletion.zsh
+
 #################
 # ENVIRONMENT VARIABLES
 #################

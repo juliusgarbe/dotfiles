@@ -10,6 +10,7 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - [`.bash_functions`](.bash_functions): Contains all personal bash functions.
 - [`.bash_profile`](.bash_profile): General configuration file for the [Bash](https://www.gnu.org/software/bash/) login shell. Sets the prefered custom shell.
 - [`.bashrc`](.bashrc): Configuration file for interactive non-login Bash shells. Loads aliases from `.bash_aliases` and functions from `.bash_functions`.
+- [`.cdoCompletion.zsh`](cdoCompletion.zsh): Definitions of CDO auto-completions for ZSH.
 - [`.condarc`](.condarc): Configuration file for the [Conda](https://docs.conda.io/en/latest/) Python package management system.
 - [`.kshrc`](.kshrc): Configuration file for the [KornShell](http://www.kornshell.org). Not used.
 - [`.ncviewrc`](.ncviewrc): Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html).

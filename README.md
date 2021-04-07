@@ -39,7 +39,7 @@ I'm using [FZF](https://github.com/junegunn/fzf). It's great. See yourself!
 
 ### Plugins
 #### Autosuggestions
-Adds type-ahead [autocomplete suggestions](https://github.com/marlonrichert/zsh-autocomplete) based on the command history:
+Adds type-ahead [autocomplete suggestions](https://github.com/zsh-users/zsh-autosuggestions) based on the command history and completions:
 
 ![autosuggestions](images/autosuggestions.png)
 

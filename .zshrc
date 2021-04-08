@@ -2,6 +2,7 @@ echo "********** ZSHRC **********"
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$PATH:/usr/bin:/usr/sbin
+export PATH=$PATH:~/.bat/bat-v0.18.0-x86_64-unknown-linux-musl # required by fzf
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -139,6 +140,8 @@ module load $NETCDF_VERSION
 
 # load fzf auto-completion and key bindings
 [[ -f $HOME/.fzf.zsh ]] && source $HOME/.fzf.zsh
+# FIX alt-c key binding
+bindkey "ç" fzf-cd-widget
 
 # load cdo auto-completion
 [[ -f $HOME/.cdoCompletion.zsh ]] && source $HOME/.cdoCompletion.zsh
@@ -161,6 +164,12 @@ export SKIP_SAME_TIME=1 # older cdo versions
 
 # set location of X applications default resources
 export XAPPLRESDIR=~/.app-defaults
+
+# fzf settings
+export FZF_DEFAULT_OPTS="--height=70% --cycle --layout=reverse --info=default --prompt='fzf >' \
+                         --preview='([[ -d {} ]] && ls -AlGhv --color=always {}) || ([[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file. || bat {} || echo {}) 2> /dev/null | head -200' \
+                         --preview-window='right:wrap' \
+                         --color='preview-bg:#3B4252'" # nord1
 
 #################
 # CONDA ENVIRONMENT

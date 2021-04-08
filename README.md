@@ -3,6 +3,7 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 
 ## Contents
 - [`.app-defaults`](.app-defaults): Contains [X applications](https://www.x.org/) default resources.
+- [`.config/bat/config`](.config/bat/config): Configuration file for [Bat](https://github.com/sharkdp/bat).
 - [`.config/matplotlib/matplotlibrc`](.config/matplotlib/matplotlibrc): Configuration file for [Matplotlib](https://matplotlib.org/index.html). See [here](https://matplotlib.org/stable/tutorials/introductory/customizing.html) for more information.
 - [`.jupyter/custom/custom.css`](.jupyter/custom/custom.css): Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom UI colors and some font styles.
 - [`.Xresources`](.Xresources): Configuration file for the [X Window System](https://www.x.org/). I'm using the pretty [Nord](https://github.com/arcticicestudio/nord-xresources) color theme. Also adds some UI customization for *Ncview*.
@@ -36,6 +37,10 @@ For more capabilities of the ZSH agnoster theme and tips how to customize the pr
 
 ### Fuzzy Finder
 I'm using [FZF](https://github.com/junegunn/fzf). It's great. See yourself!
+
+![fzf](images/fzf.png)
+
+The FZF preview uses [Bat](https://github.com/sharkdp/bat) for syntax highlighting.
 
 ### Plugins
 #### Autosuggestions

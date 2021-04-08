@@ -82,6 +82,7 @@ let g:gitgutter_log = 0
 " FZF configuration
 "
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let g:fzf_layout = { 'down': '50%' }
 
 " -----------------------------------------------------
 " More options

@@ -40,9 +40,9 @@ I'm using [FZF](https://github.com/junegunn/fzf). It's great. See yourself!
 
 ![fzf](images/fzf.png)
 
-The FZF preview uses [Bat](https://github.com/sharkdp/bat) for syntax highlighting.
+The FZF preview is configured to use [Bat](https://github.com/sharkdp/bat) for previewing files with syntax highlighting. I'm also using the pretty *Nord* theme here. For directories, the contents are listed with `ls`.
 
-### Plugins
+### Other OMZ plugins
 #### Autosuggestions
 Adds type-ahead [autocomplete suggestions](https://github.com/zsh-users/zsh-autosuggestions) based on the command history and completions:
 

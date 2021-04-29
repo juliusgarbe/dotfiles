@@ -81,6 +81,10 @@ let g:gitgutter_log = 0
 " -----------------------------------------------------
 " FZF configuration
 "
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let g:fzf_layout = { 'down': '50%' }
 

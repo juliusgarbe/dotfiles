@@ -1,8 +1,9 @@
-echo "********** ZSHRC **********"
+#echo "********** ZSHRC **********"
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$PATH:/usr/bin:/usr/sbin
-export PATH=$PATH:~/.bat/bat-v0.18.0-x86_64-unknown-linux-musl # required by fzf
+export PATH=$PATH:~/.bat/bat-v0.18.0-x86_64-unknown-linux-musl # PATH for bat (required by fzf)
+export PATH=$PATH:~/.iterm2 # PATH for imgcat (required by fzf)
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -87,6 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=en_US.utf8
 export LC_ALL=en_US.utf8
+export LC_COLLATE=en_US.utf8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -112,18 +114,17 @@ export LC_ALL=en_US.utf8
 #################
 
 # Make ZSH aware of module command
-module() { eval `/usr/share/Modules/$MODULE_VERSION/bin/modulecmd zsh $*`; }
+source /usr/share/Modules/$MODULE_VERSION/init/zsh
 
 # initial module loads
-NETCDF_VERSION=netcdf/4.1.3/intel/16.0.0/serial
 #module load pism/stable1.0
-module load cdo
+module load cdo &> /dev/null  # surpress stdout
 module load intel/2018.1     # required by nco
-module load nco
+module load nco &> /dev/null  # surpress stdout
 module load ncview
 #module load netcdf
+NETCDF_VERSION=netcdf/4.1.3/intel/16.0.0/serial
 module load $NETCDF_VERSION
-#module load anaconda
 
 #################
 # ALIASES & FUNTIONS
@@ -170,6 +171,8 @@ export FZF_DEFAULT_OPTS="--height=70% --cycle --layout=reverse --info=default --
                          --preview='([[ -d {} ]] && ls -AlGhv --color=always {}) || ([[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file. || bat {} || echo {}) 2> /dev/null | head -200' \
                          --preview-window='right:wrap' \
                          --color='preview-bg:#3B4252'" # nord1
+                         # check for image files and open with iTerm2 imgcat (doesn't work)
+                         # [[ \$(file --mime {}) =~ image/(png|jpeg) ]] && imgcat {}
 
 #################
 # CONDA ENVIRONMENT
@@ -221,4 +224,4 @@ build_prompt() {
 PROMPT='%{%f%b%k%}$(build_prompt) '
 ##
 
-echo "***************************"
+#echo "***************************"

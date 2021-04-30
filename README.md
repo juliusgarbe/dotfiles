@@ -76,7 +76,7 @@ Some convenient key mappings I use:
 | `F4` | Toggle [vim-gitgutter](https://github.com/airblade/vim-gitgutter) | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Ncview
-I use [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) extensively, so I like it to look pretty. Besides from using the [Nord](https://www.nordtheme.com) color theme, I have also made some UI tweaks (see [`.Xresources`](.Xresources)) and I use [ncmaps](https://github.com/TomLav/ncmaps) to add some nice scientific colormaps (see examples below).
+I use [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) extensively, so I like it to look pretty. In addition to using the [Nord](https://www.nordtheme.com) color theme, I also made a few UI tweaks (see [`.Xresources`](.Xresources)) and I use [ncmaps](https://github.com/TomLav/ncmaps) to add some nice scientific colormaps. Below are two examples using colormaps from [cmocean](https://matplotlib.org/cmocean/).
 
 ![ncview_example1](images/ncview_example1.png)
 ![ncview_example2](images/ncview_example2.png)

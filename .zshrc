@@ -174,6 +174,9 @@ export FZF_DEFAULT_OPTS="--height=70% --cycle --layout=reverse --info=default --
                          # check for image files and open with iTerm2 imgcat (doesn't work)
                          # [[ \$(file --mime {}) =~ image/(png|jpeg) ]] && imgcat {}
 
+# use ncmaps to add colormaps to ncview
+export NCVIEWBASE=$HOME/.ncmaps/ncmaps_myselection/
+
 #################
 # CONDA ENVIRONMENT
 #################

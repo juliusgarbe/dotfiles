@@ -14,7 +14,7 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - [`.cdoCompletion.zsh`](cdoCompletion.zsh): Definitions of CDO auto-completions for ZSH.
 - [`.condarc`](.condarc): Configuration file for the [Conda](https://docs.conda.io/en/latest/) Python package management system.
 - [`.kshrc`](.kshrc): Configuration file for the [KornShell](http://www.kornshell.org). Not used.
-- [`.ncviewrc`](.ncviewrc): Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html).
+- [`.ncviewrc`](.ncviewrc): Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html). I'm using [ncmaps](https://github.com/TomLav/ncmaps) to bring in and manage my favorite scientific colormaps.
 - [`.profile`](.profile): General configuration file for the Bash login shell. Only sourced if no `.bash_profile` is present. Currently empty, but custom environment variables might be defined here.
 - [`.vimrc`](.vimrc): Configuration file for [Vim](https://www.vim.org). I'm using [vim-plug](https://github.com/junegunn/vim-plug), e.g. for the [Nord](https://www.nordtheme.com/ports/vim) color scheme and a [beautiful statusline](https://github.com/vim-airline/vim-airline).
 - [`.xinitrc`](.xinitrc): Configuration file for the initialization of the [X Server](https://www.x.org/). Not used.
@@ -74,6 +74,12 @@ Some convenient key mappings I use:
 | `F2` | Toggle paste mode | :heavy_check_mark: | :heavy_check_mark: |
 | `F3` | Toggle invisible characters | :heavy_check_mark: | :heavy_check_mark: |
 | `F4` | Toggle [vim-gitgutter](https://github.com/airblade/vim-gitgutter) | :heavy_check_mark: | :heavy_check_mark: |
+
+## Ncview
+I use [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) extensively, so I like it to look pretty. Besides from using the [Nord](https://www.nordtheme.com) color theme, I have also made some UI tweaks (see [`.Xresources`](.Xresources)) and I use [ncmaps](https://github.com/TomLav/ncmaps) to add some nice scientific colormaps (see examples below).
+
+![ncview_example1](images/ncview_example1.png)
+![ncview_example2](images/ncview_example2.png)
 
 ## Git aliases
 Although not included in this repository, I also use some aliases to make Git look prettier and more conventient. If you want, for example, a much prettier looking `git log`, just add the following alias to the global Git config file (`~/.gitconfig`) by copy-pasting this command into your terminal:

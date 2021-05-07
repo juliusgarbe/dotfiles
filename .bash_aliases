@@ -21,8 +21,8 @@ alias top="top -c -u $USERNAME"
 alias v="vi"
 alias d="display"
 alias du="du -ach"
-alias grep="grep -ins --color=always"
-alias rgrep="grep -R"
+alias grep="grep -iIns --color=always"
+alias grepr="grep -r"
 alias quota="mmlsquota --block-size T tmp"
 
 # modules

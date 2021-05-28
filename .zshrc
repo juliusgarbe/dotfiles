@@ -1,5 +1,3 @@
-#echo "********** ZSHRC **********"
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$PATH:/usr/bin:/usr/sbin
 export PATH=$PATH:~/.bat/bat-v0.18.0-x86_64-unknown-linux-musl # PATH for bat (required by fzf)
@@ -164,20 +162,7 @@ if [[ -f $HOME/.cdoCompletion.zsh ]]; then
   source $HOME/.cdoCompletion.zsh
 fi
 
-#################
-# CONDA ENVIRONMENT
-#################
-
-# enable conda
+# enable conda and activate custom environment (set in .bash/variables.sh)
 . /p/system/packages/anaconda/5.0.0_py3/etc/profile.d/conda.sh
-
-# activate custom conda environment
-MY_CONDA_ENV=py2
-export CONDA_DIR=/home/garbe/.conda
-export CONDA_PREFIX=$CONDA_DIR/envs/$MY_CONDA_ENV
 conda activate $MY_CONDA_ENV
 
-# fix missing PROJ4 env var for basemap
-export PROJ_LIB=$CONDA_PREFIX/share/proj
-
-#echo "***************************"

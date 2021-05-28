@@ -6,6 +6,7 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - [`.bash/aliases.sh`](.bash/aliases.sh): Contains all personal bash alias definitions.
 - [`.bash/functions.sh`](.bash/functions.sh): Contains all personal bash functions.
 - [`.bash/prompt.sh`](.bash/prompt.sh): Customize apprearance of shell prompt.
+- [`.bash/variables.sh`](.bash/variables.sh): Contains personal environment variables.
 - [`.bash_profile`](.bash_profile): General configuration file for the [Bash](https://www.gnu.org/software/bash/) login shell. Sets the prefered custom shell.
 - [`.bashrc`](.bashrc): Configuration file for interactive non-login Bash shells. Loads aliases from `.bash/aliases.sh`, functions from `.bash/functions.sh`, and environment variables from `.bash/variables.sh`.
 - [`.cdoCompletion.zsh`](cdoCompletion.zsh): Definitions of CDO auto-completions for ZSH.

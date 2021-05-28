@@ -2,8 +2,6 @@
 # DO NOT PRINT ANY OUTPUT FROM THIS FILE!
 # ********************************************
 
-#echo "********** BASH_PROFILE **********" 
-
 # Activate ZSH as default shell
 # If not running interactively, don't do anything
 case $- in

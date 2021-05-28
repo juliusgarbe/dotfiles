@@ -28,3 +28,11 @@ export FZF_DEFAULT_OPTS="--height=70% --cycle --layout=reverse --info=default --
 # use ncmaps to add colormaps to ncview
 export NCVIEWBASE=$HOME/.ncmaps/ncmaps_myselection/
 
+# set custom conda environment and fix variables
+export MY_CONDA_ENV=py2
+export CONDA_DIR=$HOME/.conda
+export CONDA_PREFIX=$CONDA_DIR/envs/$MY_CONDA_ENV
+
+# fix missing PROJ4 env var for basemap
+export PROJ_LIB=$CONDA_PREFIX/share/proj
+

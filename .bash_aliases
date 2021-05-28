@@ -24,6 +24,8 @@ alias du="du -ach"
 alias grep="grep -iIns --color=always"
 alias grepr="grep -r"
 alias quota="mmlsquota --block-size T tmp"
+alias untar="tar -xvf"
+alias untargz="tar -xzvf"
 
 # modules
 alias ma="module avail"

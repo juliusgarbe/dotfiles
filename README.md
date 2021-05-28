@@ -7,7 +7,7 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - [`.bash/functions.sh`](.bash/functions.sh): Contains all personal bash functions.
 - [`.bash/prompt.sh`](.bash/prompt.sh): Customize apprearance of shell prompt.
 - [`.bash_profile`](.bash_profile): General configuration file for the [Bash](https://www.gnu.org/software/bash/) login shell. Sets the prefered custom shell.
-- [`.bashrc`](.bashrc): Configuration file for interactive non-login Bash shells. Loads aliases from `.bash/aliases.sh` and functions from `.bash/functions.sh`.
+- [`.bashrc`](.bashrc): Configuration file for interactive non-login Bash shells. Loads aliases from `.bash/aliases.sh`, functions from `.bash/functions.sh`, and environment variables from `.bash/variables.sh`.
 - [`.cdoCompletion.zsh`](cdoCompletion.zsh): Definitions of CDO auto-completions for ZSH.
 - [`.condarc`](.condarc): Configuration file for the [Conda](https://docs.conda.io/en/latest/) Python package management system.
 - [`.config/bat/config`](.config/bat/config): Configuration file for [Bat](https://github.com/sharkdp/bat).

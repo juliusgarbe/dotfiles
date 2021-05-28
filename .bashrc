@@ -13,4 +13,5 @@ esac
 # load aliases & functions
 [ -f $HOME/.bash/aliases.sh ] && source $HOME/.bash/aliases.sh
 [ -f $HOME/.bash/functions.sh ] && source $HOME/.bash/functions.sh
+[ -f $HOME/.bash/variables.sh ] && source $HOME/.bash/variables.sh
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash

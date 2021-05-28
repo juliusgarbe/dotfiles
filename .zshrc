@@ -123,62 +123,46 @@ module load intel/2018.1     # required by nco
 module load nco &> /dev/null  # surpress stdout
 module load ncview
 #module load netcdf
-NETCDF_VERSION=netcdf/4.1.3/intel/16.0.0/serial
+export NETCDF_VERSION=netcdf/4.1.3/intel/16.0.0/serial
 module load $NETCDF_VERSION
 
 #################
-# ALIASES & FUNTIONS
-#################
 
 # set custom prompt
-[[ -f $HOME/.bash/prompt.sh ]] && source $HOME/.bash/prompt.sh
+if [[ -f $HOME/.bash/prompt.sh ]]; then
+  source $HOME/.bash/prompt.sh
+fi
+
+# load custom environment variables
+if [[ -f $HOME/.bash/variables.sh ]]; then
+  source $HOME/.bash/variables.sh
+fi
 
 # load aliases
-[[ -f $HOME/.bash/aliases.sh ]] && source $HOME/.bash/aliases.sh
+if [[ -f $HOME/.bash/aliases.sh ]]; then
+  source $HOME/.bash/aliases.sh
+fi
 
 # load functions
-[[ -f $HOME/.bash/functions.sh ]] && source $HOME/.bash/functions.sh
+if [[ -f $HOME/.bash/functions.sh ]]; then
+  source $HOME/.bash/functions.sh
+fi
 
 # load custom Xresources file
-[[ -f $HOME/.Xresources ]] && xrdb -merge $HOME/.Xresources
+if [[ -f $HOME/.Xresources ]]; then
+  xrdb -merge $HOME/.Xresources
+fi
 
 # load fzf auto-completion and key bindings
-[[ -f $HOME/.fzf.zsh ]] && source $HOME/.fzf.zsh
-# FIX alt-c key binding
-bindkey "ç" fzf-cd-widget
+if [[ -f $HOME/.fzf.zsh ]]; then
+  source $HOME/.fzf.zsh
+  bindkey "ç" fzf-cd-widget # FIX alt-c key binding
+fi
 
 # load cdo auto-completion
-[[ -f $HOME/.cdoCompletion.zsh ]] && source $HOME/.cdoCompletion.zsh
-
-#################
-# ENVIRONMENT VARIABLES
-#################
-
-# NetCDF libraries for Fortran compiler
-export NETCDF_INC=/p/system/packages/$NETCDF_VERSION/include
-export NETCDF_LIB=/p/system/packages/$NETCDF_VERSION/lib
-
-# slurm settings
-export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"
-export SACCT_FORMAT="JobID,JobName,Account,QOS,Timelimit,NNodes,AllocCPUS,Elapsed,State,ExitCode,DerivedExitcode"
-
-# handle time overlaps when using cdo mergetime
-export SKIPSAMETIME=1 # cdo 1.9.6
-export SKIP_SAME_TIME=1 # older cdo versions
-
-# set location of X applications default resources
-export XAPPLRESDIR=~/.app-defaults
-
-# fzf settings
-export FZF_DEFAULT_OPTS="--height=70% --cycle --layout=reverse --info=default --prompt='fzf >' \
-                         --preview='([[ -d {} ]] && ls -AlGhv --color=always {}) || ([[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file. || bat {} || echo {}) 2> /dev/null | head -200' \
-                         --preview-window='right:wrap' \
-                         --color='preview-bg:#3B4252'" # nord1
-                         # check for image files and open with iTerm2 imgcat (doesn't work)
-                         # [[ \$(file --mime {}) =~ image/(png|jpeg) ]] && imgcat {}
-
-# use ncmaps to add colormaps to ncview
-export NCVIEWBASE=$HOME/.ncmaps/ncmaps_myselection/
+if [[ -f $HOME/.cdoCompletion.zsh ]]; then
+  source $HOME/.cdoCompletion.zsh
+fi
 
 #################
 # CONDA ENVIRONMENT
@@ -195,6 +179,5 @@ conda activate $MY_CONDA_ENV
 
 # fix missing PROJ4 env var for basemap
 export PROJ_LIB=$CONDA_PREFIX/share/proj
-
 
 #echo "***************************"

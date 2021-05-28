@@ -3,7 +3,7 @@
 # ALIASES
 
 # tools & software
-alias aliases="vi ~/.bash_aliases"
+alias aliases="vi ~/.bash/aliases.sh"
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias subl="/home/albrecht/software/sublime_text_3/sublime_text"
 alias nb="jupyter notebook --no-browser --port=8081 --NotebookApp.iopub_data_rate_limit=10000000000"

@@ -11,6 +11,6 @@ case $- in
 esac
 
 # load aliases & functions
-[ -f $HOME/.bash_aliases ] && source $HOME/.bash_aliases
-[ -f $HOME/.bash_functions ] && source $HOME/.bash_functions
+[ -f $HOME/.bash/aliases.sh ] && source $HOME/.bash/aliases.sh
+[ -f $HOME/.bash/functions.sh ] && source $HOME/.bash/functions.sh
 [ -f $HOME/.fzf.bash ] && source $HOME/.fzf.bash

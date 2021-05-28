@@ -9,7 +9,8 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - [`.bash/variables.sh`](.bash/variables.sh): Contains personal environment variables.
 - [`.bash_profile`](.bash_profile): General configuration file for the [Bash](https://www.gnu.org/software/bash/) login shell. Sets the prefered custom shell.
 - [`.bashrc`](.bashrc): Configuration file for interactive non-login Bash shells. Loads aliases from `.bash/aliases.sh`, functions from `.bash/functions.sh`, and environment variables from `.bash/variables.sh`.
-- [`.cdoCompletion.zsh`](cdoCompletion.zsh): Definitions of CDO auto-completions for ZSH.
+- [`.cdo/cdoCompletion.bash`](.cdo/cdoCompletion.bash): Definitions of CDO auto-completions for Bash.
+- [`.cdo/cdoCompletion.zsh`](.cdo/cdoCompletion.zsh): Definitions of CDO auto-completions for ZSH.
 - [`.condarc`](.condarc): Configuration file for the [Conda](https://docs.conda.io/en/latest/) Python package management system.
 - [`.config/bat/config`](.config/bat/config): Configuration file for [Bat](https://github.com/sharkdp/bat).
 - [`.config/matplotlib/matplotlibrc`](.config/matplotlib/matplotlibrc): Configuration file for [Matplotlib](https://matplotlib.org/index.html). See [here](https://matplotlib.org/stable/tutorials/introductory/customizing.html) for more information.

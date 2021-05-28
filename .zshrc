@@ -158,8 +158,8 @@ if [[ -f $HOME/.fzf.zsh ]]; then
 fi
 
 # load cdo auto-completion
-if [[ -f $HOME/.cdoCompletion.zsh ]]; then
-  source $HOME/.cdoCompletion.zsh
+if [[ -f $HOME/.cdo/cdoCompletion.zsh ]]; then
+  source $HOME/.cdo/cdoCompletion.zsh
 fi
 
 # enable conda and activate custom environment (set in .bash/variables.sh)

@@ -107,6 +107,9 @@ export LC_COLLATE=en_US.utf8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Extended globbing and expansion
+setopt extended_glob
+
 #################
 # ENVIRONMENT MODULES
 #################

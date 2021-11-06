@@ -5,9 +5,9 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - [`.app-defaults`](.app-defaults): Contains [X applications](https://www.x.org/) default resources.
 - [`.bash/aliases.sh`](.bash/aliases.sh): Contains all personal bash alias definitions.
 - [`.bash/functions.sh`](.bash/functions.sh): Contains all personal bash functions.
-- [`.bash/prompt.sh`](.bash/prompt.sh): Customize apprearance of shell prompt.
+- [`.bash/prompt.sh`](.bash/prompt.sh): Customize appearance of shell prompt.
 - [`.bash/variables.sh`](.bash/variables.sh): Contains personal environment variables.
-- [`.bash_profile`](.bash_profile): General configuration file for the [Bash](https://www.gnu.org/software/bash/) login shell. Sets the prefered custom shell.
+- [`.bash_profile`](.bash_profile): General configuration file for the [Bash](https://www.gnu.org/software/bash/) login shell. Sets the preferred custom shell.
 - [`.bashrc`](.bashrc): Configuration file for interactive non-login Bash shells. Loads aliases from `.bash/aliases.sh`, functions from `.bash/functions.sh`, and environment variables from `.bash/variables.sh`.
 - [`.cdo/cdoCompletion.bash`](.cdo/cdoCompletion.bash): Definitions of CDO auto-completions for Bash.
 - [`.cdo/cdoCompletion.zsh`](.cdo/cdoCompletion.zsh): Definitions of CDO auto-completions for ZSH.
@@ -16,8 +16,8 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - [`.config/matplotlib/matplotlibrc`](.config/matplotlib/matplotlibrc): Configuration file for [Matplotlib](https://matplotlib.org/index.html). See [here](https://matplotlib.org/stable/tutorials/introductory/customizing.html) for more information.
 - [`.jupyter/custom/custom.css`](.jupyter/custom/custom.css): Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom UI colors and some font styles.
 - [`.kshrc`](.kshrc): Configuration file for the [KornShell](http://www.kornshell.org). Not used.
-- [`.ncmaps/ncmaps_myselection`](.ncmaps/ncmaps_myselection): Personal selection of [ncmaps](https://github.com/TomLav/ncmaps) colormaps used for *Ncview*.
-- [`.ncviewrc`](.ncviewrc): Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html). I'm using [ncmaps](https://github.com/TomLav/ncmaps) to bring in and manage my favorite scientific colormaps.
+- [`.ncmaps/ncmaps_myselection`](.ncmaps/ncmaps_myselection): Personal selection of [ncmaps](https://github.com/TomLav/ncmaps) color maps used for *Ncview*.
+- [`.ncviewrc`](.ncviewrc): Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html). I'm using [ncmaps](https://github.com/TomLav/ncmaps) to bring in and manage my favorite scientific color maps.
 - [`.profile`](.profile): General configuration file for the Bash login shell. Only sourced if no `.bash_profile` is present. Currently empty, but custom environment variables might be defined here.
 - [`.vimrc`](.vimrc): Configuration file for [Vim](https://www.vim.org). I'm using [vim-plug](https://github.com/junegunn/vim-plug), e.g. for the [Nord](https://www.nordtheme.com/ports/vim) color scheme and a [beautiful statusline](https://github.com/vim-airline/vim-airline).
 - [`.xinitrc`](.xinitrc): Configuration file for the initialization of the [X Server](https://www.x.org/). Not used.
@@ -52,8 +52,8 @@ Adds type-ahead [autocomplete suggestions](https://github.com/zsh-users/zsh-auto
 
 ![autosuggestions](images/autosuggestions.png)
 
-#### Syntax highlightling
-The [zsh-syntax-highlightling](https://github.com/zsh-users/zsh-syntax-highlighting) plugin makes commands turn green if typed right, red if not, while files & folders get underlined if existing.
+#### Syntax highlighting
+The [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) plugin makes commands turn green if typed right, red if not, while files & folders get underlined if existing.
 
 ## Vim
 ### Plugins
@@ -86,15 +86,16 @@ Some convenient key mappings I use:
 | `F3` | Toggle paste mode | :heavy_check_mark: | :heavy_check_mark: |
 | `F4` | Toggle [vim-gitgutter](#gitgutter) | :heavy_check_mark: | :heavy_check_mark: |
 | `F5` | Toggle invisible characters | :heavy_check_mark: | :heavy_check_mark: |
+| `F6` | Toggle spell checking | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Ncview
-I use [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) extensively, so I like it to look pretty. In addition to using the [Nord](https://www.nordtheme.com) color theme, I also made a few UI tweaks (see [`.Xresources`](.Xresources)) and I use [ncmaps](https://github.com/TomLav/ncmaps) to add some nice scientific colormaps. Below are two examples using colormaps from [cmocean](https://matplotlib.org/cmocean/).
+I use [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) extensively, so I like it to look pretty. In addition to using the [Nord](https://www.nordtheme.com) color theme, I also made a few UI tweaks (see [`.Xresources`](.Xresources)) and I use [ncmaps](https://github.com/TomLav/ncmaps) to add some nice scientific color maps. Below are two examples using color maps from [cmocean](https://matplotlib.org/cmocean/).
 
 ![ncview_example1](images/ncview_example1.png)
 ![ncview_example2](images/ncview_example2.png)
 
 ## Git aliases
-Although not included in this repository, I also use some aliases to make Git look prettier and more conventient. If you want, for example, a much prettier looking `git log`, just add the following alias to the global Git config file (`~/.gitconfig`) by copy-pasting this command into your terminal:
+Although not included in this repository, I also use some aliases to make Git look prettier and more convenient. If you want, for example, a much prettier looking `git log`, just add the following alias to the global Git config file (`~/.gitconfig`) by copy-pasting this command into your terminal:
 ```
 git config --global alias.logg "log --color --graph --pretty=format:'%C(bold yellow)%h%C(reset) - %C(green)[%cr]%C(reset) %s - %C(dim white)%an%C(reset) %C(bold red)%d%C(reset)' --abbrev-commit"
 ```
@@ -131,4 +132,4 @@ config commit -m "Add bashrc"
 For more details, see [here](https://www.atlassian.com/git/tutorials/dotfiles).
 
 ## Authorship
-This repository is maintaned by [Julius Garbe](mailto:julius.garbe@pik-potsdam.de). Unless stated otherwise, the code is licensed under the [MIT License](LICENSE.txt).
+This repository is maintained by [Julius Garbe](mailto:julius.garbe@pik-potsdam.de). Unless stated otherwise, the code is licensed under the [MIT License](LICENSE.txt).

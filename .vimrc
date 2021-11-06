@@ -168,6 +168,9 @@ nnoremap <silent> <F4> :GitGutterToggle<CR>
 " Toggle invisible characters
 nnoremap <silent> <F5> :set list!<CR>
 
+" Toggle spell checking
+nnoremap <silent> <F6> :set spell!<CR>
+
 " Jump to beginning, first non-whitespace character, or end of line
 nnoremap <C-a><C-a> <ESC>0
 nnoremap <C-a> <ESC>^
@@ -197,6 +200,9 @@ inoremap <silent> <F4> <C-O>:GitGutterToggle<CR>
 
 " Toggle invisible characters
 inoremap <silent> <F5> <C-O>:set list!<CR>
+
+" Toggle spell checking
+inoremap <silent> <F6> <C-O>:set spell!<CR>
 
 " Jump to beginning, first non-whitespace character, or end of line
 inoremap <C-a><C-a> <C-o>0

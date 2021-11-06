@@ -66,11 +66,14 @@ alias cdd="cd $PPROJECTS/dominoes"
 
 alias pism="cd $HOME/pism"
 alias exp="cd $HOME/pism_experiments"
-alias hyst="cd $PTMP/projects/AIS_StepForcing"
-alias equi="cd $PTMP/projects/AIS_Equilibrium"
-alias over="cd $PTMP/projects/AIS_Overshoots"
-alias thres="cd $PTMP/projects/AIS_Threshold"
 alias data="cd $PPROJECTS/pism/$USERNAME/2018_PISM_Input_Data"
+
+alias equi="cd $PTMP/projects/AIS_Equilibrium"
+alias ground="cd $PTMP/projects/AIS_GroundingLineStability"
+alias hyst="cd $PTMP/projects/AIS_StepForcing"
+alias over="cd $PTMP/projects/AIS_Overshoots"
+alias surf="cd $PTMP/projects/AIS_SurfaceMelt"
+alias thres="cd $PTMP/projects/AIS_Threshold"
 
 alias cmake_pism="rm -rf build/ && bash CmakePismOnBroadwell.sh"
 

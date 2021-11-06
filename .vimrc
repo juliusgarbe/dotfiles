@@ -89,6 +89,16 @@ let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let g:fzf_layout = { 'down': '50%' }
 
 " -----------------------------------------------------
+" Netrw configuration
+"
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_winsize = 20
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+"let g:netrw_chgwin = 1
+
+" -----------------------------------------------------
 " More options
 "
 set encoding=utf-8 " needed for Airline and emojis

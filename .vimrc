@@ -148,19 +148,25 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " Key mappings
 "
 " Toggle paste mode (normal and insert mode)
-set pastetoggle=<F2>
+set pastetoggle=<F3>
 
 "
 " Normal mode mappings
 "
-" Toggle line numbers
-nnoremap <silent> <F1> :set number!<CR>
+" Open FZF
+nnoremap <Tab><Tab> :FZF<CR>
 
-" Toggle invisible characters
-nnoremap <silent> <F3> :set list!<CR>
+" Open Netrw directory browser
+nnoremap <silent> <F1> :Vexplore<CR>
+
+" Toggle line numbers
+nnoremap <silent> <F2> :set number!<CR>
 
 " Toggle GitGutter
 nnoremap <silent> <F4> :GitGutterToggle<CR>
+
+" Toggle invisible characters
+nnoremap <silent> <F5> :set list!<CR>
 
 " Jump to beginning, first non-whitespace character, or end of line
 nnoremap <C-a><C-a> <ESC>0
@@ -184,13 +190,13 @@ nnoremap <silent> <S-Tab> gT
 " Insert mode mappings
 "
 " Toggle line numbers
-inoremap <silent> <F1> <C-O>:set number!<CR>
-
-" Toggle invisible characters
-inoremap <silent> <F3> <C-O>:set list!<CR>
+inoremap <silent> <F2> <C-O>:set number!<CR>
 
 " Toggle GitGutter
 inoremap <silent> <F4> <C-O>:GitGutterToggle<CR>
+
+" Toggle invisible characters
+inoremap <silent> <F5> <C-O>:set list!<CR>
 
 " Jump to beginning, first non-whitespace character, or end of line
 inoremap <C-a><C-a> <C-o>0

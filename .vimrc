@@ -167,6 +167,16 @@ nnoremap <C-a><C-a> <ESC>0
 nnoremap <C-a> <ESC>^
 nnoremap <C-e> <ESC>$
 
+" Change between split panes
+nnoremap <silent> <S-Right> <C-w><Right>
+nnoremap <silent> <S-Left> <C-w><Left>
+nnoremap <silent> <S-Up> <C-w><Up>
+nnoremap <silent> <S-Down> <C-w><Down>
+
+" Change between tabs
+nnoremap <silent> <Tab> gt
+nnoremap <silent> <S-Tab> gT
+
 " This mapping grabs the X11 primary clipboard register and opens the corresponding netcdf header in a new vertical split
 "nnoremap <leader>ncd :vnew<Bar>0r!ncdump -h <C-R>*<CR>
 

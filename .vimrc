@@ -154,13 +154,13 @@ set pastetoggle=<F2>
 " Normal mode mappings
 "
 " Toggle line numbers
-noremap <silent> <F1> :set number!<CR>
+nnoremap <silent> <F1> :set number!<CR>
 
 " Toggle invisible characters
-noremap <silent> <F3> :set list!<CR>
+nnoremap <silent> <F3> :set list!<CR>
 
 " Toggle GitGutter
-noremap <silent> <F4> :GitGutterToggle<CR>
+nnoremap <silent> <F4> :GitGutterToggle<CR>
 
 " Jump to beginning, first non-whitespace character, or end of line
 nnoremap <C-a><C-a> <ESC>0

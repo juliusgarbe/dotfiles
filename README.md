@@ -26,18 +26,18 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 
 ## ZSH
 ### Theme / prompt
-ZSH is configured with the following prompt to indicate the active conda environment as well as the current version control worktree status by changing its color:
+ZSH is configured with the Agnoster theme which adds some more useful information to the prompt, e.g. it indicates the active conda environment as well as the current version control worktree status by changing its color:
 
-Unstaged changes:
+*Unstaged changes:*
 ![prompt unstaged changes](images/prompt1.png)
 
-Staged changes:
+*Staged changes:*
 ![prompt staged changes](images/prompt2.png)
 
-Clean worktree:
+*Clean worktree:*
 ![prompt clean worktree](images/prompt3.png)
 
-For more capabilities of the ZSH agnoster theme and tips how to customize the prompt view, see [here](https://github.com/agnoster/agnoster-zsh-theme).
+For more capabilities of the Agnoster theme and tips how to customize the prompt view, see [here](https://github.com/agnoster/agnoster-zsh-theme).
 
 ### Fuzzy Finder
 I'm using [FZF](https://github.com/junegunn/fzf). It's great. See yourself!
@@ -59,25 +59,33 @@ The [zsh-syntax-highlightling](https://github.com/zsh-users/zsh-syntax-highlight
 ### Plugins
 My plugins are managed through the [vim-plug](https://github.com/junegunn/vim-plug) Vim plugin manager. Below are some of the plugins I enjoy using:
 
-#### nord-vim
+#### Nord Vim
 I'm using the beautiful [Nord](https://www.nordtheme.com/ports/vim) Vim color theme.
 
-#### vim-airline
+#### Statusline
 The [vim-airline](https://github.com/vim-airline/vim-airline) plugin enables a nice and customizable statusline at the bottom of each Vim window:
 ![screenshot vim](images/vim.png)
 
 #### Fuzzy Finder
 Integrates [FZF](#fuzzy-finder) as a Vim plugin.
 
+#### Indent Guides
+The useful [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) plugin adds the functionality to visually display indent levels in Vim.
+
+#### Gitgutter
+The [vim-gitgutter](https://github.com/airblade/vim-gitgutter) plugin shows a git diff in the sign column, i.e. which lines have been added, modified, or removed.
+
 ### Mappings
 Some convenient key mappings I use:
 
 | Key | Mapping | Normal mode | Insert mode |
 | --- | ------- | ----------- | ----------- |
-| `F1` | Toggle line numbers | :heavy_check_mark: | :heavy_check_mark: |
-| `F2` | Toggle paste mode | :heavy_check_mark: | :heavy_check_mark: |
-| `F3` | Toggle invisible characters | :heavy_check_mark: | :heavy_check_mark: |
-| `F4` | Toggle [vim-gitgutter](https://github.com/airblade/vim-gitgutter) | :heavy_check_mark: | :heavy_check_mark: |
+| `Tab` `Tab` | Open [Fuzzy Finder](#fuzzy-finder) | :heavy_check_mark: | :heavy_minus_sign: |
+| `F1` | Open [Netrw](#netrw) browser | :heavy_check_mark: | :heavy_minus_sign: |
+| `F2` | Toggle line numbers | :heavy_check_mark: | :heavy_check_mark: |
+| `F3` | Toggle paste mode | :heavy_check_mark: | :heavy_check_mark: |
+| `F4` | Toggle [vim-gitgutter](#gitgutter) | :heavy_check_mark: | :heavy_check_mark: |
+| `F5` | Toggle invisible characters | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Ncview
 I use [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) extensively, so I like it to look pretty. In addition to using the [Nord](https://www.nordtheme.com) color theme, I also made a few UI tweaks (see [`.Xresources`](.Xresources)) and I use [ncmaps](https://github.com/TomLav/ncmaps) to add some nice scientific colormaps. Below are two examples using colormaps from [cmocean](https://matplotlib.org/cmocean/).

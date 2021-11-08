@@ -75,18 +75,21 @@ The useful [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guide
 #### Gitgutter
 The [vim-gitgutter](https://github.com/airblade/vim-gitgutter) plugin shows a git diff in the sign column, i.e. which lines have been added, modified, or removed.
 
+#### Netrw
+I'm using Vim's built-in file explorer. It's simple yet helpful.
+
 ### Mappings
 Some convenient key mappings I use:
 
 | Key | Mapping | Normal mode | Insert mode |
 | --- | ------- | ----------- | ----------- |
 | `Tab` `Tab` | Open [Fuzzy Finder](#fuzzy-finder) | :heavy_check_mark: | :heavy_minus_sign: |
-| `F1` | Open [Netrw](#netrw) browser | :heavy_check_mark: | :heavy_minus_sign: |
-| `F2` | Toggle line numbers | :heavy_check_mark: | :heavy_check_mark: |
-| `F3` | Toggle paste mode | :heavy_check_mark: | :heavy_check_mark: |
-| `F4` | Toggle [vim-gitgutter](#gitgutter) | :heavy_check_mark: | :heavy_check_mark: |
-| `F5` | Toggle invisible characters | :heavy_check_mark: | :heavy_check_mark: |
-| `F6` | Toggle spell checking | :heavy_check_mark: | :heavy_check_mark: |
+| `e` | Toggle [Netrw](#netrw) browser | :heavy_check_mark: | :heavy_minus_sign: |
+| `F1` | Toggle line numbers | :heavy_check_mark: | :heavy_check_mark: |
+| `F2` | Toggle paste mode | :heavy_check_mark: | :heavy_check_mark: |
+| `F3` | Toggle [vim-gitgutter](#gitgutter) | :heavy_check_mark: | :heavy_check_mark: |
+| `F4` | Toggle invisible characters | :heavy_check_mark: | :heavy_check_mark: |
+| `F5` | Toggle spell checking | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Ncview
 I use [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) extensively, so I like it to look pretty. In addition to using the [Nord](https://www.nordtheme.com) color theme, I also made a few UI tweaks (see [`.Xresources`](.Xresources)) and I use [ncmaps](https://github.com/TomLav/ncmaps) to add some nice scientific color maps. Below are two examples using color maps from [cmocean](https://matplotlib.org/cmocean/).

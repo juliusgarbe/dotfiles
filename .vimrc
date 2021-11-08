@@ -93,10 +93,17 @@ let g:fzf_layout = { 'down': '50%' }
 "
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_winsize = 20
+let g:netrw_winsize = 25
 let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 "let g:netrw_chgwin = 1
+function ToggleNetRW()
+    if exists("g:netrw_buffer") && bufexists(g:netrw_buffer)
+        exe "bd".g:netrw_buffer | unlet g:netrw_buffer
+    else
+        Vexplore | let g:netrw_buffer=bufnr("%")
+    endif
+endfunction
 
 " -----------------------------------------------------
 " More options
@@ -158,7 +165,7 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " Key mappings
 "
 " Toggle paste mode (normal and insert mode)
-set pastetoggle=<F3>
+set pastetoggle=<F2>
 
 "
 " Normal mode mappings
@@ -167,19 +174,20 @@ set pastetoggle=<F3>
 nnoremap <Tab><Tab> :FZF<CR>
 
 " Open Netrw directory browser
-nnoremap <silent> <F1> :Vexplore<CR>
+"nnoremap <silent> <F1> :Vexplore<CR>
+nnoremap <silent> e :call ToggleNetRW()<CR>
 
 " Toggle line numbers
-nnoremap <silent> <F2> :set number!<CR>
+nnoremap <silent> <F1> :set number!<CR>
 
 " Toggle GitGutter
-nnoremap <silent> <F4> :GitGutterToggle<CR>
+nnoremap <silent> <F3> :GitGutterToggle<CR>
 
 " Toggle invisible characters
-nnoremap <silent> <F5> :set list!<CR>
+nnoremap <silent> <F4> :set list!<CR>
 
 " Toggle spell checking
-nnoremap <silent> <F6> :set spell!<CR>
+nnoremap <silent> <F5> :set spell!<CR>
 
 " Jump to beginning, first non-whitespace character, or end of line
 nnoremap <C-a><C-a> <ESC>0
@@ -203,16 +211,16 @@ nnoremap <silent> <S-Tab> gT
 " Insert mode mappings
 "
 " Toggle line numbers
-inoremap <silent> <F2> <C-O>:set number!<CR>
+inoremap <silent> <F1> <C-O>:set number!<CR>
 
 " Toggle GitGutter
-inoremap <silent> <F4> <C-O>:GitGutterToggle<CR>
+inoremap <silent> <F3> <C-O>:GitGutterToggle<CR>
 
 " Toggle invisible characters
-inoremap <silent> <F5> <C-O>:set list!<CR>
+inoremap <silent> <F4> <C-O>:set list!<CR>
 
 " Toggle spell checking
-inoremap <silent> <F6> <C-O>:set spell!<CR>
+inoremap <silent> <F5> <C-O>:set spell!<CR>
 
 " Jump to beginning, first non-whitespace character, or end of line
 inoremap <C-a><C-a> <C-o>0

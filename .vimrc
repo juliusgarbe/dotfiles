@@ -95,9 +95,11 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 25
 let g:netrw_browse_split = 4
+let g:netrw_preview = 1
 let g:netrw_list_hide= '.*\.swp$'
 "let g:netrw_altv = 1
 let g:netrw_chgwin = 2
+
 function ToggleNetRW()
     if exists("g:netrw_buffer") && bufexists(g:netrw_buffer)
         exe "bd".g:netrw_buffer | unlet g:netrw_buffer
@@ -105,6 +107,18 @@ function ToggleNetRW()
         Vexplore | let g:netrw_buffer=bufnr("%")
     endif
 endfunction
+
+" Netrw key mappings
+function! NetrwMapping()
+  nmap <buffer> <left> -
+  nmap <buffer> . gh
+  nmap <buffer> q <C-w>z
+endfunction
+
+augroup netrw_mapping
+  autocmd!
+  autocmd filetype netrw call NetrwMapping()
+augroup END
 
 " -----------------------------------------------------
 " More options

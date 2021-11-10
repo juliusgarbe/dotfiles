@@ -105,6 +105,14 @@ git config --global alias.logg "log --color --graph --pretty=format:'%C(bold yel
 Now, using the alias `git logg` instead of `git log`, your commit history looks like this:
 ![git logg](images/gitlogg.png)
 
+Another shortcut to make the `git branch` command more informative is to define the following alias:
+```
+git config --global alias.branches "branch -vv"
+```
+Using `git branches` instead of the usual `git branch` now also prints the SHA1 and subject line of each branch's HEAD, as well as the name of the upstream branch:
+
+![git branches](images/gitbranches.png)
+
 ## Installing and managing dotfiles
 
 > :warning: **WARNING:** These files contain code which affects the way your system behaves. **DO NOT** use blindly unless you know what that entails and only after reviewing the code. Use at your own risk! And always remember: with great power comes great responsibility. :point_up:

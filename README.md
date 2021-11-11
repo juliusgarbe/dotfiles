@@ -105,6 +105,14 @@ git config --global alias.logg "log --color --graph --pretty=format:'%C(bold yel
 Now, using the alias `git logg` instead of `git log`, your commit history looks like this:
 ![git logg](images/gitlogg.png)
 
+Similarly, you can output a formatted and colored list of the tags using the following alias:
+```
+git config --global alias.tags "tag --sort=taggerdate --format='%(color:bold yellow)%(refname:short)%(color:reset) - %(color:green)[%(taggerdate:relative)]%(color:reset) %(subject) - %(color:dim white)%(taggername)%(color:reset)'"
+```
+The output of `git tags` will now look like this:
+
+![git tags](images/gittags.png)
+
 Another shortcut to make the `git branch` command more informative is to define the following alias:
 ```
 git config --global alias.branches "branch -vv"

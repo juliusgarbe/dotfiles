@@ -1,0 +1,40 @@
+[user]
+	# set in ~/.gitconfig_local
+
+[github]
+	# set in ~/.gitconfig_local
+
+[include]
+	path = ~/.gitconfig_local
+
+[alias]
+	add-commit = !git add -A && git commit
+	logg = log --color --graph --pretty=format:'%C(bold yellow)%h%C(reset) - %C(green)[%cr]%C(reset) %s - %C(dim white)%an%C(reset) %C(bold red)%d%C(reset)' --abbrev-commit
+	tags = tag --sort=taggerdate --format='%(color:bold yellow)%(refname:short)%(color:reset) - %(color:green)[%(taggerdate:relative)]%(color:reset) %(subject) - %(color:dim white)%(taggername)%(color:reset)'
+	branches = branch -a -vv
+	contributors = shortlog --summary --numbered
+
+[pull]
+	rebase = true
+
+[push]
+	default = matching
+
+[color]
+	ui = auto
+
+[color "diff"]
+	meta = yellow bold
+	frag = blue bold # line info
+	old = red # deletions
+	new = green # additions
+
+[color "branch"]
+	current = yellow bold
+	local = green
+	remote = blue
+
+[color "status"]
+	added = green
+	changed = yellow
+	untracked = red

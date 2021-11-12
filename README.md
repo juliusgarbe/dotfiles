@@ -14,6 +14,7 @@ This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotf
 - [`.condarc`](.condarc): Configuration file for the [Conda](https://docs.conda.io/en/latest/) Python package management system.
 - [`.config/bat/config`](.config/bat/config): Configuration file for [Bat](https://github.com/sharkdp/bat).
 - [`.config/matplotlib/matplotlibrc`](.config/matplotlib/matplotlibrc): Configuration file for [Matplotlib](https://matplotlib.org/index.html). See [here](https://matplotlib.org/stable/tutorials/introductory/customizing.html) for more information.
+- [`.gitconfig`](.gitconfig): [Git](https://git-scm.com) configuration file, contains some handy aliases and UI color definitions.
 - [`.jupyter/custom/custom.css`](.jupyter/custom/custom.css): Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom UI colors and some font styles.
 - [`.kshrc`](.kshrc): Configuration file for the [KornShell](http://www.kornshell.org). Not used.
 - [`.ncmaps/ncmaps_myselection`](.ncmaps/ncmaps_myselection): Personal selection of [ncmaps](https://github.com/TomLav/ncmaps) color maps used for *Ncview*.
@@ -98,7 +99,7 @@ I use [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) extensivel
 ![ncview_example2](images/ncview_example2.png)
 
 ## Git aliases
-Although not included in this repository, I also use some aliases to make Git look prettier and more convenient. If you want, for example, a much prettier looking `git log`, just add the following alias to the global Git config file (`~/.gitconfig`) by copy-pasting this command into your terminal:
+I also use some aliases to make Git look prettier and more convenient. If you want, for example, a much prettier looking `git log`, just add the following alias to the global Git config file (`~/.gitconfig`) by copy-pasting this command into your terminal:
 ```
 git config --global alias.logg "log --color --graph --pretty=format:'%C(bold yellow)%h%C(reset) - %C(green)[%cr]%C(reset) %s - %C(dim white)%an%C(reset) %C(bold red)%d%C(reset)' --abbrev-commit"
 ```

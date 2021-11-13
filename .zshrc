@@ -169,3 +169,6 @@ fi
 . /p/system/packages/anaconda/5.0.0_py3/etc/profile.d/conda.sh
 conda activate $MY_CONDA_ENV
 
+# show dotfiles git status on startup
+config status
+

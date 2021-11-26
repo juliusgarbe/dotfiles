@@ -2,6 +2,9 @@
 
 # ENVIRONMENT VARIABLES
 
+# Use bat instead of less as pager
+export PAGER=bat
+
 # Man pages
 export MANPAGER=bat
 export MAN_POSIXLY_CORRECT=1 # automatically show first page if multiple are available

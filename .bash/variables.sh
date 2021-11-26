@@ -2,6 +2,10 @@
 
 # ENVIRONMENT VARIABLES
 
+# Man pages
+export MANPAGER=bat
+export MAN_POSIXLY_CORRECT=1 # automatically show first page if multiple are available
+
 # NetCDF libraries for Fortran compiler
 export NETCDF_INC=/p/system/packages/$NETCDF_VERSION/include
 export NETCDF_LIB=/p/system/packages/$NETCDF_VERSION/lib

@@ -8,8 +8,7 @@ alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias subl="/home/albrecht/software/sublime_text_3/sublime_text"
 alias nb="jupyter notebook --no-browser --port=8081 --NotebookApp.iopub_data_rate_limit=10000000000"
 alias p="python"
-alias nv="ncview -noautoflip -pause_on_restart -small -maxsize 75" #maxsize: in percent #1280,1024
-#alias ncdump="/p/system/packages/anaconda/2.3.0/bin/ncdump"
+alias ncview="ncview -noautoflip -pause_on_restart -small -maxsize 75" #maxsize: in percent #1280,1024
 alias nd="ncdump -h"
 alias ndv="ncdump -v"
 alias ndiff="ncdiff"

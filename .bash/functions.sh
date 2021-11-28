@@ -5,22 +5,30 @@
 # batch rename multiple files using a given pattern
 # example usage: rename TEST test TEST*
 # will rename files 'TEST1.txt', 'TEST2.txt', ... to 'test1.txt', 'test2.txt', ...
-function rename () {
-  expression=$1
-  replacement=$2
-  shift 2 # omit first two parsed arguments when expanding wildcard
-  files=( "$@" )
-  for file in $files; do echo mv $file ${file//$expression/$replacement}; done
-  echo "Are you sure?"
-  select yn in "Yes" "No"; do
-    case $yn in
-      Yes ) for file in $files; do mv $file ${file//$expression/$replacement}; done; break;;
-      No ) return;; # return without closing shell
-    esac
-  done
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# NOTE: There's already the 'rename' command doing exactly this!
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#function rename () {
+#  expression=$1
+#  replacement=$2
+#  shift 2 # omit first two parsed arguments when expanding wildcard
+#  files=( "$@" )
+#  for file in $files; do echo mv $file ${file//$expression/$replacement}; done
+#  echo "Are you sure?"
+#  select yn in "Yes" "No"; do
+#    case $yn in
+#      Yes ) for file in $files; do mv $file ${file//$expression/$replacement}; done; break;;
+#      No ) return;; # return without closing shell
+#    esac
+#  done
+#}
+
+# open ncview in background
+function nv () {
+  ncview $1 &
 }
 
-# open multiple netcdf files at once (requires module ncview to be loaded)
+# open multiple netcdf files with PISM-like naming pattern in ncview at once
 # example usage: nm extra 100 200 20
 function nm () {
   ncview $(for n in {$2..$3..$4}; do echo $1_$n.000.nc; done) &

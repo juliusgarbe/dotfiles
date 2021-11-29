@@ -25,7 +25,7 @@
 
 # open ncview in background
 function nv () {
-  ncview $@ &
+  ncview "$@" &
 }
 
 # open multiple netcdf files with PISM-like naming pattern in ncview at once

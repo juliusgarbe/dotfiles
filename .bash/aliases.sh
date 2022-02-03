@@ -8,7 +8,7 @@ alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias subl="/home/albrecht/software/sublime_text_3/sublime_text"
 alias nb="jupyter notebook --no-browser --port=8081 --NotebookApp.iopub_data_rate_limit=10000000000"
 alias p="python"
-alias ncview="ncview -noautoflip -pause_on_restart -small -maxsize 75" #maxsize: in percent #1280,1024
+alias ncview="ncview -noautoflip -small -maxsize 75" #-pause_on_restart #maxsize: in percent #1280,1024
 alias nd="ncdump -h"
 alias ndv="ncdump -v"
 alias ndiff="ncdiff"
@@ -52,6 +52,7 @@ alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
 alias rm="rm -i"
+alias rename="rename -v"
 alias md="mkdir"
 alias c="clear"
 alias e="exit"
@@ -92,6 +93,7 @@ alias sm="smap -i 1"
 alias sv="sview &"
 alias sb="sbatch"
 alias sc="scancel"
+alias scall="squeue -u $USER | awk '{print $1}' | xargs -n 1 scancel"
 alias ssq="sacctmgr show qos format=name,priority,maxwall,mintres,maxtres,grptres"
 alias sj="scontrol show job -dd"
 alias sa="sacct"

@@ -235,6 +235,10 @@ nnoremap <silent> <S-Left> <C-w><Left>
 nnoremap <silent> <S-Up> <C-w><Up>
 nnoremap <silent> <S-Down> <C-w><Down>
 
+" Change between buffers
+nnoremap <silent>  :bn<CR>
+nnoremap <silent>  :bp<CR>
+
 " Change between tabs
 nnoremap <silent> <Tab> gt
 nnoremap <silent> <S-Tab> gT

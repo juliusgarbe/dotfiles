@@ -38,3 +38,6 @@
 	added = green
 	changed = yellow
 	untracked = red
+	branch = blue bold
+	localBranch = blue bold
+	remoteBranch = blue bold

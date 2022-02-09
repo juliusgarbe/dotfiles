@@ -169,6 +169,12 @@ fi
 . /p/system/packages/anaconda/5.0.0_py3/etc/profile.d/conda.sh
 conda activate $MY_CONDA_ENV
 
-# show dotfiles git status on startup
-config status
+# show disk usage on startup
+echo "******************** DISK USAGE ********************"
+. $HOME/scripts/Cluster/print_project_quota.sh
+echo #"****************************************************"
 
+# show dotfiles git status on startup
+echo "***************** DOTFILES STATUS ******************"
+config status
+echo "****************************************************"

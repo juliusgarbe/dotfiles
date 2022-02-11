@@ -2,6 +2,16 @@
 
 # ENVIRONMENT VARIABLES
 
+# PATH adjustments
+export PATH=$PATH:/usr/bin:/usr/sbin
+export PATH=$PATH:~/.bat/bat-v0.18.0-x86_64-unknown-linux-musl # PATH for bat (required by fzf)
+export PATH=$PATH:~/.iterm2 # PATH for imgcat (required by fzf)
+
+# language settings
+export LANG=en_US.utf8
+export LC_ALL=en_US.utf8
+export LC_COLLATE=en_US.utf8
+
 # Use bat instead of less as pager
 export PAGER=bat
 

@@ -1,8 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$PATH:/usr/bin:/usr/sbin
-export PATH=$PATH:~/.bat/bat-v0.18.0-x86_64-unknown-linux-musl # PATH for bat (required by fzf)
-export PATH=$PATH:~/.iterm2 # PATH for imgcat (required by fzf)
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -82,11 +77,6 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-export LANG=en_US.utf8
-export LC_ALL=en_US.utf8
-export LC_COLLATE=en_US.utf8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then

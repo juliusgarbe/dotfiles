@@ -1,28 +1,34 @@
 # Dotfiles
-This repository contains my [dotfiles](https://wiki.archlinux.org/index.php/Dotfiles).
+This repository contains my personal system configuration files, a.k.a. [dotfiles](https://wiki.archlinux.org/index.php/Dotfiles).
 
 ## Contents
-- [`.app-defaults`](.app-defaults): Contains [X applications](https://www.x.org/) default resources.
-- [`.bash/aliases.sh`](.bash/aliases.sh): Contains all personal bash alias definitions.
-- [`.bash/functions.sh`](.bash/functions.sh): Contains all personal bash functions.
-- [`.bash/prompt.sh`](.bash/prompt.sh): Customize appearance of shell prompt.
-- [`.bash/variables.sh`](.bash/variables.sh): Contains personal environment variables.
+- [`.app-defaults/`](.app-defaults/): Contains [X applications](https://www.x.org/) default resources.
+  - [`Ncview`](.app-defaults/Ncview): Contains the default resources for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html).
+- [`.bash/`](.bash/): Contains general shell environment definitions.
+  - [`aliases.sh`](.bash/aliases.sh): Contains all personal bash alias definitions.
+  - [`functions.sh`](.bash/functions.sh): Contains all personal bash functions.
+  - [`prompt.sh`](.bash/prompt.sh): Customize appearance of shell prompt.
+  - [`variables.sh`](.bash/variables.sh): Contains personal environment variables.
 - [`.bash_profile`](.bash_profile): General configuration file for the [Bash](https://www.gnu.org/software/bash/) login shell. Sets the preferred custom shell.
 - [`.bashrc`](.bashrc): Configuration file for interactive non-login Bash shells. Loads aliases from `.bash/aliases.sh`, functions from `.bash/functions.sh`, and environment variables from `.bash/variables.sh`.
-- [`.cdo/cdoCompletion.bash`](.cdo/cdoCompletion.bash): Definitions of CDO auto-completions for Bash.
-- [`.cdo/cdoCompletion.zsh`](.cdo/cdoCompletion.zsh): Definitions of CDO auto-completions for ZSH.
+- [`.cdo/`](.cdo/): Settings for the [Climate Data Operators (CDO)](https://code.mpimet.mpg.de/projects/cdo).
+  - [`cdoCompletion.bash`](.cdo/cdoCompletion.bash): Definitions of CDO auto-completions for Bash.
+  - [`cdoCompletion.zsh`](.cdo/cdoCompletion.zsh): Definitions of CDO auto-completions for ZSH.
 - [`.condarc`](.condarc): Configuration file for the [Conda](https://docs.conda.io/en/latest/) Python package management system.
-- [`.config/bat/config`](.config/bat/config): Configuration file for [Bat](https://github.com/sharkdp/bat).
-- [`.config/matplotlib/matplotlibrc`](.config/matplotlib/matplotlibrc): Configuration file for [Matplotlib](https://matplotlib.org/index.html). See [here](https://matplotlib.org/stable/tutorials/introductory/customizing.html) for more information.
+- [`.config/`](.config/): Contains further user-specific configuration files.
+  - [`bat/config`](.config/bat/config): Configuration file for [Bat](https://github.com/sharkdp/bat).
+  - [`matplotlib/matplotlibrc`](.config/matplotlib/matplotlibrc): Configuration file for [Matplotlib](https://matplotlib.org/index.html). See [here](https://matplotlib.org/stable/tutorials/introductory/customizing.html) for more information.
 - [`.gitconfig`](.gitconfig): [Git](https://git-scm.com) configuration file, contains some handy aliases and UI color definitions.
-- [`.jupyter/custom/custom.css`](.jupyter/custom/custom.css): Configuration file for [Jupyter Notebooks](https://jupyter.org). Mainly adds custom UI colors and some font styles.
-- [`.kshrc`](.kshrc): Configuration file for the [KornShell](http://www.kornshell.org). Not used.
-- [`.ncmaps/ncmaps_myselection`](.ncmaps/ncmaps_myselection): Personal selection of [ncmaps](https://github.com/TomLav/ncmaps) color maps used for *Ncview*.
+- [`.jupyter/`](.jupyter/): Contains configuration files for [Jupyter Notebooks](https://jupyter.org).
+  - [`.custom/custom.css`](.jupyter/custom/custom.css): This file mainly adds custom UI colors and some font styles to Jupyter Notebooks.
+- [`.kshrc`](.kshrc): Configuration file for the [KornShell](http://www.kornshell.org). Currently not used.
+- [`.ncmaps/`](.ncmaps/): Contains [ncmaps](https://github.com/TomLav/ncmaps) settings.
+  - [`ncmaps_myselection`](.ncmaps/ncmaps_myselection): Personal selection of ncmaps color maps used for Ncview.
 - [`.ncviewrc`](.ncviewrc): Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html). I'm using [ncmaps](https://github.com/TomLav/ncmaps) to bring in and manage my favorite scientific color maps.
 - [`.profile`](.profile): General configuration file for the Bash login shell. Only sourced if no `.bash_profile` is present. Currently empty, but custom environment variables might be defined here.
 - [`.vimrc`](.vimrc): Configuration file for [Vim](https://www.vim.org). I'm using [vim-plug](https://github.com/junegunn/vim-plug), e.g. for the [Nord](https://www.nordtheme.com/ports/vim) color scheme and a [beautiful statusline](https://github.com/vim-airline/vim-airline).
 - [`.xinitrc`](.xinitrc): Configuration file for the initialization of the [X Server](https://www.x.org/). Not used.
-- [`.Xresources`](.Xresources): Configuration file for the [X Window System](https://www.x.org/). I'm using the pretty [Nord](https://github.com/arcticicestudio/nord-xresources) color theme. Also adds some UI customization for *Ncview*.
+- [`.Xresources`](.Xresources): Configuration file for the [X Window System](https://www.x.org/). I'm using the pretty [Nord](https://github.com/arcticicestudio/nord-xresources) color theme. Also adds some UI customization for Ncview.
 - [`.zshrc`](.zshrc): Configuration file for [Oh My Zsh](https://ohmyz.sh). Loads custom themes and plugins, as well as custom shell aliases, functions, environment variables, and more. The [agnoster](https://github.com/agnoster/agnoster-zsh-theme) theme requires [Powerline-patched Fonts](https://github.com/powerline/fonts) to be installed and a unicode-compatible terminal (I use [iTerm2](https://www.iterm2.com)) in order to render properly.
 
 ## ZSH
@@ -41,7 +47,7 @@ ZSH is configured with the Agnoster theme which adds some more useful informatio
 For more capabilities of the Agnoster theme and tips how to customize the prompt view, see [here](https://github.com/agnoster/agnoster-zsh-theme).
 
 ### Fuzzy Finder
-I'm using [FZF](https://github.com/junegunn/fzf). It's great. See yourself!
+I'm using [FZF](https://github.com/junegunn/fzf). It's great - see yourself!
 
 ![fzf](images/fzf.png)
 
@@ -58,7 +64,7 @@ The [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighti
 
 ## Vim
 ### Plugins
-My plugins are managed through the [vim-plug](https://github.com/junegunn/vim-plug) Vim plugin manager. Below are some of the plugins I enjoy using:
+My plugins are managed through the [vim-plug](https://github.com/junegunn/vim-plug) plugin manager. Below are some of the plugins I enjoy using:
 
 #### Nord Vim
 I'm using the beautiful [Nord](https://www.nordtheme.com/ports/vim) Vim color theme.
@@ -77,20 +83,20 @@ The useful [vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guide
 The [vim-gitgutter](https://github.com/airblade/vim-gitgutter) plugin shows a git diff in the sign column, i.e. which lines have been added, modified, or removed.
 
 #### Netrw
-I'm using Vim's built-in file explorer. It's simple yet helpful.
+I'm using Vim's built-in file explorer (`:Explore`) for quick access to my files. It's simple yet helpful and with some customization it renders any additional plugin like NERDTree dispensable.
 
 ### Mappings
-Some convenient key mappings I use:
+I am a long-time Mac user and as such I'm used to certain shortcuts or key strokes when it comes to quick navigation between open files and windows. My Vim is therefore configured with key mappings like <kbd>Shift</kbd><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> to switch between vertical window splits, <kbd>Alt</kbd><kbd>&#8592;</kbd>/<kbd>&#8594;</kbd> to switch between open buffers, and <kbd>Tab</kbd>/<kbd>Shift</kbd><kbd>Tab</kbd> to switch between tabs. Below are some more convenient key mappings I use:
 
 | Key | Mapping | Normal mode | Insert mode |
 | --- | ------- | ----------- | ----------- |
-| `Tab` `Tab` | Open [Fuzzy Finder](#fuzzy-finder) | :heavy_check_mark: | :heavy_minus_sign: |
-| `e` | Toggle [Netrw](#netrw) browser | :heavy_check_mark: | :heavy_minus_sign: |
-| `F1` | Toggle line numbers | :heavy_check_mark: | :heavy_check_mark: |
-| `F2` | Toggle paste mode | :heavy_check_mark: | :heavy_check_mark: |
-| `F3` | Toggle [vim-gitgutter](#gitgutter) | :heavy_check_mark: | :heavy_check_mark: |
-| `F4` | Toggle invisible characters | :heavy_check_mark: | :heavy_check_mark: |
-| `F5` | Toggle spell checking | :heavy_check_mark: | :heavy_check_mark: |
+| <kbd>Tab</kbd><kbd>Tab</kbd> | Open [Fuzzy Finder](#fuzzy-finder) | :heavy_check_mark: | :heavy_minus_sign: |
+| <kbd>e</kbd> | Toggle [Netrw](#netrw) browser side panel | :heavy_check_mark: | :heavy_minus_sign: |
+| <kbd>F1</kbd> | Toggle line numbers | :heavy_check_mark: | :heavy_check_mark: |
+| <kbd>F2</kbd> | Toggle paste mode | :heavy_check_mark: | :heavy_check_mark: |
+| <kbd>F3</kbd> | Toggle [vim-gitgutter](#gitgutter) | :heavy_check_mark: | :heavy_check_mark: |
+| <kbd>F4</kbd> | Toggle invisible characters | :heavy_check_mark: | :heavy_check_mark: |
+| <kbd>F5</kbd> | Toggle spell checking | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Ncview
 I use [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) extensively, so I like it to look pretty. In addition to using the [Nord](https://www.nordtheme.com) color theme, I also made a few UI tweaks (see [`.Xresources`](.Xresources)) and I use [ncmaps](https://github.com/TomLav/ncmaps) to add some nice scientific color maps. Below are two examples using color maps from [cmocean](https://matplotlib.org/cmocean/).

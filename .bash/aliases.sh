@@ -75,7 +75,7 @@ alias over="cd $PTMP/projects/AIS_Overshoots"
 alias surf="cd $PTMP/projects/AIS_SurfaceMelt"
 alias thres="cd $PTMP/projects/AIS_Threshold"
 
-alias cmake_pism="rm -rf build/ && bash CmakePismOnBroadwell.sh"
+alias cmake_pism="rm -rf build/ && ./cmake_pism.sh"
 
 # git
 alias gstat="git status"

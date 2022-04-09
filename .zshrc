@@ -162,9 +162,14 @@ conda activate $MY_CONDA_ENV
 # show disk usage on startup
 echo "******************** DISK USAGE ********************"
 . $HOME/scripts/Cluster/print_project_quota.sh
-echo #"****************************************************"
+
+# show currently loaded OMZ plugins
+echo "******************* OMZ PLUGINS ********************"
+echo $plugins
 
 # show dotfiles git status on startup
 echo "***************** DOTFILES STATUS ******************"
 config status
+
 echo "****************************************************"
+

@@ -52,6 +52,12 @@ function findd () {
   find -L . -type d -path '*/\.*' -prune -o -not -name '.*' -type d -iname $1 -print
 }
 
+# get bibtex entry from DOI object
+# example usage: bibtex https://doi.org/10.1038/s41586-020-2727-5
+function bibtex () {
+  curl -LH "Accept: application/x-bibtex" $1
+}
+
 # start jupyter notebook on cluster nodes via slurm submission
 #TODO: forward file name to submission script
 function snb () {

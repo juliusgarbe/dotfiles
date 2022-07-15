@@ -110,12 +110,11 @@ source /usr/share/Modules/$MODULE_VERSION/init/zsh
 # initial module loads
 #module load pism/stable1.0
 module load cdo &> /dev/null  # suppress stdout
-module load intel/2018.1     # required by nco
-module load nco &> /dev/null  # suppress stdout
+module load intel/2018.1     # required by nco/4.7.8
+module load nco/4.7.8 &> /dev/null  # suppress stdout
 module load ncview
-#module load netcdf
-export NETCDF_VERSION=netcdf/4.1.3/intel/16.0.0/serial
-module load $NETCDF_VERSION
+#export NETCDF_VERSION=netcdf-c/4.9.0/gnu/10.2 #netcdf/4.1.3/intel/16.0.0/serial
+#module load $NETCDF_VERSION
 
 #################
 

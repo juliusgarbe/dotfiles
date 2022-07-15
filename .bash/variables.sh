@@ -19,9 +19,9 @@ export PAGER=bat
 export MANPAGER=bat
 export MAN_POSIXLY_CORRECT=1 # automatically show first page if multiple are available
 
-# NetCDF libraries for Fortran compiler
-export NETCDF_INC=/p/system/packages/$NETCDF_VERSION/include
-export NETCDF_LIB=/p/system/packages/$NETCDF_VERSION/lib
+# Set NetCDF libraries manually so that Fortran compiler can find it
+#export NETCDF_INC=/p/system/packages/$NETCDF_VERSION/include
+#export NETCDF_LIB=/p/system/packages/$NETCDF_VERSION/lib
 
 # slurm settings
 export SQUEUE_FORMAT="%8i %70j %6u %8a %2t %12M %12L %12l %5D %4C %8q %18R %10p"

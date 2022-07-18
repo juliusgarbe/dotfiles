@@ -162,6 +162,10 @@ conda activate $MY_CONDA_ENV
 echo "******************** DISK USAGE ********************"
 . $HOME/scripts/Cluster/print_project_quota.sh
 
+# show currently loaded modules
+echo "********************* MODULES **********************"
+module list
+
 # show currently loaded OMZ plugins
 echo "******************* OMZ PLUGINS ********************"
 echo $plugins

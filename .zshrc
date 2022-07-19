@@ -113,6 +113,7 @@ module load cdo &> /dev/null  # suppress stdout
 module load intel/2018.1     # required by nco/4.7.8
 module load nco/4.7.8 &> /dev/null  # suppress stdout
 module load ncview
+module load proj4
 #export NETCDF_VERSION=netcdf-c/4.9.0/gnu/10.2 #netcdf/4.1.3/intel/16.0.0/serial
 #module load $NETCDF_VERSION
 

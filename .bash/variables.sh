@@ -51,5 +51,5 @@ export CONDA_DIR=$HOME/.conda
 export CONDA_PREFIX=$CONDA_DIR/envs/$MY_CONDA_ENV
 
 # fix missing PROJ4 env var for basemap
-export PROJ_LIB=$CONDA_PREFIX/share/proj
+#export PROJ_LIB=$CONDA_PREFIX/share/proj # use proj4 module instead
 

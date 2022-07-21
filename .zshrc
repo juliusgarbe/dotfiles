@@ -109,7 +109,7 @@ source /usr/share/Modules/$MODULE_VERSION/init/zsh
 
 # initial module loads
 #module load pism
-module load cdo &> /dev/null  # suppress stdout
+module load cdo/1.9.10/threadsafe &> /dev/null  # suppress stdout
 module load intel/2018.1     # required by nco/4.7.8
 module load nco/4.7.8 &> /dev/null  # suppress stdout
 module load ncview

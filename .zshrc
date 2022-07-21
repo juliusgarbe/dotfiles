@@ -108,12 +108,12 @@ setopt extended_glob
 source /usr/share/Modules/$MODULE_VERSION/init/zsh
 
 # initial module loads
-#module load pism
+#module load pism  # requires to load module proj4
 module load cdo/1.9.10/threadsafe &> /dev/null  # suppress stdout
-module load intel/2018.1     # required by nco/4.7.8
+module load intel/2018.1  # required by nco/4.7.8
 module load nco/4.7.8 &> /dev/null  # suppress stdout
 module load ncview
-module load proj4
+#module load proj4  # required when loading module pism
 #export NETCDF_VERSION=netcdf-c/4.9.0/gnu/10.2 #netcdf/4.1.3/intel/16.0.0/serial
 #module load $NETCDF_VERSION
 

@@ -36,11 +36,11 @@ export XAPPLRESDIR=~/.app-defaults
 
 # fzf settings
 export FZF_DEFAULT_OPTS="--height=70% --cycle --layout=reverse --info=default --prompt='fzf >' \
-                         --preview='([[ -d {} ]] && ls -AlGhv --color=always {}) || ([[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file. || bat {} || echo {}) 2> /dev/null | head -200' \
-                         --preview-window='right:wrap' \
-                         --color='preview-bg:#3B4252'" # nord1
-                         # check for image files and open with iTerm2 imgcat (doesn't work)
-                         # [[ \$(file --mime {}) =~ image/(png|jpeg) ]] && imgcat {}
+--preview='([[ -d {} ]] && ls -AlGhv --color=always {}) || ([[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file. || bat {} || echo {}) 2> /dev/null | head -200' \
+--preview-window='right:wrap' \
+--color='preview-bg:#3B4252'" # nord1
+# check for image files and open with iTerm2 imgcat (doesn't work)
+# [[ \$(file --mime {}) =~ image/(png|jpeg) ]] && imgcat {}
 
 # use ncmaps to add colormaps to ncview
 export NCVIEWBASE=$HOME/.ncmaps/ncmaps_myselection/

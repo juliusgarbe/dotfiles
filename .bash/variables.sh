@@ -4,7 +4,7 @@
 
 # PATH adjustments
 export PATH=$PATH:/usr/bin:/usr/sbin
-export PATH=$PATH:~/.bat/bat-v0.18.0-x86_64-unknown-linux-musl # PATH for bat (required by fzf)
+export PATH=$PATH:~/.bat/bat-v0.21.0-x86_64-unknown-linux-musl # PATH for bat (required by fzf)
 export PATH=$PATH:~/.iterm2 # PATH for imgcat (required by fzf)
 
 # language settings

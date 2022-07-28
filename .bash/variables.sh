@@ -5,6 +5,7 @@
 # PATH adjustments
 export PATH=$PATH:/usr/bin:/usr/sbin
 export PATH=$PATH:~/.bat/bat-v0.21.0-x86_64-unknown-linux-musl # PATH for bat (required by fzf)
+export PATH=$PATH:~/.fd/fd-v8.4.0-x86_64-unknown-linux-musl # PATH for fd (required by fzf)
 export PATH=$PATH:~/.iterm2 # PATH for imgcat (required by fzf)
 
 # language settings
@@ -35,6 +36,8 @@ export SKIP_SAME_TIME=1 # older cdo versions
 export XAPPLRESDIR=~/.app-defaults
 
 # fzf settings
+export FZF_DEFAULT_COMMAND='fd --type f --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--height=70% --cycle --layout=reverse --info=default --prompt='fzf >' \
 --preview='([[ -d {} ]] && ls -AlGhv --color=always {}) || ([[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file. || bat {} || echo {}) 2> /dev/null | head -200' \
 --preview-window='right:wrap' \

@@ -52,7 +52,7 @@ I'm using [FZF](https://github.com/junegunn/fzf). It's great - see yourself!
 
 ![fzf](images/fzf.png)
 
-The FZF preview is configured to use [Bat](https://github.com/sharkdp/bat) for previewing files with syntax highlighting. I'm also using the pretty *Nord* theme here. For directories, the contents are listed with `ls`.
+FZF uses [fd](https://github.com/sharkdp/fd) to find files and the preview is configured to use [Bat](https://github.com/sharkdp/bat) for previewing files with syntax highlighting. I'm also using the *Nord* theme here. For directories, the contents are listed with `ls`.
 
 ### Other OMZ plugins
 #### Autosuggestions

@@ -40,6 +40,12 @@ function curltocloud () {
   curl -u "garbe":"$1" -T "$2" "https://cloud.pik-potsdam.de/remote.php/dav/files/garbe/$(basename $2)"
 }
 
+# download a file from the PIK cloud server via curl
+# example usage: curlfromcloud '***' path/to/examplefile (put password in single quotes)
+function curlfromcloud () {
+  curl -X GET -u "garbe":"$1" "https://cloud.pik-potsdam.de/remote.php/dav/files/garbe/$2" --output $(basename $2)
+}
+
 # recursively find files (excluding hidden directories and files)
 # example usage: findf "*.pdf"
 function findf () {

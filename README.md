@@ -100,7 +100,7 @@ I am a long-time Mac user and as such I'm used to certain shortcuts or key strok
 | <kbd>F5</kbd> | Toggle spell checking | :heavy_check_mark: | :heavy_check_mark: |
 
 ## Ncview
-I use [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) extensively, so I like it to look pretty. In addition to using the [Nord](https://www.nordtheme.com) color theme, I also made a few UI tweaks (see [`.Xresources`](.Xresources)) and I use [ncmaps](https://github.com/TomLav/ncmaps) to add some nice scientific color maps. Below are two examples using color maps from [cmocean](https://matplotlib.org/cmocean/).
+I use [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html) extensively, so I like it to look pretty. In addition to using the [Nord](https://www.nordtheme.com) color theme, I also made a few UI tweaks (see [`.Xresources`](.Xresources)) and I use [ncmaps](https://github.com/TomLav/ncmaps) and [cmasher](https://cmasher.readthedocs.io) to add some nice scientific color maps. Below are two examples using color maps from [cmocean](https://matplotlib.org/cmocean/).
 
 ![ncview_example1](images/ncview_example1.png)
 ![ncview_example2](images/ncview_example2.png)

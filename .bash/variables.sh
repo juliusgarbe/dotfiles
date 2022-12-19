@@ -32,6 +32,9 @@ export SACCT_FORMAT="JobID,JobName,Account,QOS,Timelimit,NNodes,AllocCPUS,Elapse
 export SKIPSAMETIME=1 # cdo 1.9.6
 export SKIP_SAME_TIME=1 # older cdo versions
 
+# use cdo extrapolation when remapping
+export REMAP_EXTRAPOLATE=1
+
 # set location of X applications default resources
 export XAPPLRESDIR=~/.app-defaults
 

@@ -2,27 +2,6 @@
 
 # FUNCTIONS
 
-# batch rename multiple files using a given pattern
-# example usage: rename TEST test TEST*
-# will rename files 'TEST1.txt', 'TEST2.txt', ... to 'test1.txt', 'test2.txt', ...
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-# NOTE: There's already the 'rename' command doing exactly this!
-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-#function rename () {
-#  expression=$1
-#  replacement=$2
-#  shift 2 # omit first two parsed arguments when expanding wildcard
-#  files=( "$@" )
-#  for file in $files; do echo mv $file ${file//$expression/$replacement}; done
-#  echo "Are you sure?"
-#  select yn in "Yes" "No"; do
-#    case $yn in
-#      Yes ) for file in $files; do mv $file ${file//$expression/$replacement}; done; break;;
-#      No ) return;; # return without closing shell
-#    esac
-#  done
-#}
-
 # open ncview in background
 function nv () {
   ncview "$@" &

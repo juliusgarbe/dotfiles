@@ -47,15 +47,15 @@ function curlfromcloud () {
 }
 
 # recursively find files (excluding hidden directories and files)
-# example usage: findf "*.pdf"
+# example usage: findf .pdf
 function findf () {
-  find -L . -type d -path '*/\.*' -prune -o -not -name '.*' -type f -iname $1 -print
+  find . -type d -path '*/\.*' -prune -o -not -name '.*' -type f -iname \*"$1"\* -print | grep "$1"
 }
 
 # recursively find directories (excluding hidden directories)
-# example usage: findd "*historical*"
+# example usage: findd historical
 function findd () {
-  find -L . -type d -path '*/\.*' -prune -o -not -name '.*' -type d -iname $1 -print
+  find . -type d -path '*/\.*' -prune -o -not -name '.*' -type d -iname \*"$1"\* -exec ls -dlh {} \; | grep "$1"
 }
 
 # get bibtex entry from DOI object

@@ -38,6 +38,9 @@ export REMAP_EXTRAPOLATE=1
 # set location of X applications default resources
 export XAPPLRESDIR=~/.app-defaults
 
+# use 24-bit truecolor support for correct color support
+export COLORTERM=truecolor
+
 # fzf settings
 export FZF_DEFAULT_COMMAND='fd --type f --type d --color=always'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

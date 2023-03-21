@@ -27,7 +27,6 @@
 
 # See `man bat` for all available options
 --style=plain
---color=always
---decorations=always
+--force-colorization # alias for '--decorations=always --color=always'
 --wrap=auto
 --tabs 4

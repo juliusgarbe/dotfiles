@@ -1,6 +1,6 @@
 # enable conda and activate custom environment
 . /p/system/packages/anaconda/5.0.0_py3/etc/profile.d/conda.sh
-conda activate py2
+conda activate py3
 
 # fire up jupyter notebook
 jupyter notebook --no-browser --port=8081 --NotebookApp.iopub_data_rate_limit=10000000000

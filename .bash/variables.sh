@@ -4,6 +4,7 @@
 
 # PATH adjustments
 export PATH=$PATH:/usr/bin:/usr/sbin
+export PATH=$PATH:~/.local/bin # PATH for additional python executables (e.g. sphinx)
 export PATH=$PATH:~/.bat/bat-v0.23.0-x86_64-unknown-linux-musl # PATH for bat (required by fzf)
 export PATH=$PATH:~/.fd/fd-v8.4.0-x86_64-unknown-linux-musl # PATH for fd (required by fzf)
 export PATH=$PATH:~/.iterm2 # PATH for imgcat (required by fzf)

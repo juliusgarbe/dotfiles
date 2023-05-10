@@ -23,6 +23,7 @@ This repository contains my personal system configuration files, a.k.a. [dotfile
   - [`.custom/custom.css`](.jupyter/custom/custom.css): This file mainly adds custom UI colors and some font styles to Jupyter Notebooks.
 - [`.kshrc`](.kshrc): Configuration file for the [KornShell](http://www.kornshell.org). Currently not used.
 - [`.launch-jupyter`](.launch-jupyter): Run Jupyter Notebooks on login nodes with output-forwarding into my local browser. Requires logging in with port listening enabled (`ssh -L`). Load automatically using `ssh [...] -t 'exec bash ~/.launch-jupyter; bash -i'`. 
+- [`.launch-jupyter-slurm`](.launch-jupyter-slurm): Run Jupyter Notebooks on compute nodes (using SLURM) with output-forwarding into my local browser. Requires logging in with port listening enabled (`ssh -L`). 
 - [`.ncmaps/`](.ncmaps/): Contains [ncmaps](https://github.com/TomLav/ncmaps) settings.
   - [`ncmaps_myselection`](.ncmaps/ncmaps_myselection): Personal selection of ncmaps color maps used for Ncview.
 - [`.ncviewrc`](.ncviewrc): Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html). I'm using [ncmaps](https://github.com/TomLav/ncmaps) to bring in and manage my favorite scientific color maps.

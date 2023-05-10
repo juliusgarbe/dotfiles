@@ -22,6 +22,7 @@ This repository contains my personal system configuration files, a.k.a. [dotfile
 - [`.jupyter/`](.jupyter/): Contains configuration files for [Jupyter Notebooks](https://jupyter.org).
   - [`.custom/custom.css`](.jupyter/custom/custom.css): This file mainly adds custom UI colors and some font styles to Jupyter Notebooks.
 - [`.kshrc`](.kshrc): Configuration file for the [KornShell](http://www.kornshell.org). Currently not used.
+- [`.launch-jupyter`](.launch-jupyter): Run Jupyter Notebooks on login nodes with output-forwarding into my local browser. Requires logging in with port listening enabled (`ssh -L`). Load automatically using `ssh [...] -t 'exec bash ~/.launch-jupyter; bash -i'`. 
 - [`.ncmaps/`](.ncmaps/): Contains [ncmaps](https://github.com/TomLav/ncmaps) settings.
   - [`ncmaps_myselection`](.ncmaps/ncmaps_myselection): Personal selection of ncmaps color maps used for Ncview.
 - [`.ncviewrc`](.ncviewrc): Configuration file for [Ncview](http://meteora.ucsd.edu/~pierce/ncview_home_page.html). I'm using [ncmaps](https://github.com/TomLav/ncmaps) to bring in and manage my favorite scientific color maps.
@@ -30,7 +31,6 @@ This repository contains my personal system configuration files, a.k.a. [dotfile
 - [`.xinitrc`](.xinitrc): Configuration file for the initialization of the [X Server](https://www.x.org/). Not used.
 - [`.Xresources`](.Xresources): Configuration file for the [X Window System](https://www.x.org/). I'm using the pretty [Nord](https://github.com/arcticicestudio/nord-xresources) color theme. Also adds some UI customization for Ncview.
 - [`.zshrc`](.zshrc): Configuration file for [Oh My Zsh](https://ohmyz.sh). Loads custom themes and plugins, as well as custom shell aliases, functions, environment variables, and more. The [agnoster](https://github.com/agnoster/agnoster-zsh-theme) theme requires [Powerline-patched Fonts](https://github.com/powerline/fonts) to be installed and a unicode-compatible terminal (I use [iTerm2](https://www.iterm2.com)) in order to render properly.
-- [`.zshrc_nb`](.zshrc_nb): Configuration file for [Oh My Zsh](https://ohmyz.sh) which is only loaded when I want to run Jupyter Notebooks with output-forwarding into my local browser. Requires logging in with port listening enabled (`ssh -L`). Load automatically using `ssh [...] -t 'exec zsh ~/.zshrc_nb; bash -i'`. 
 
 ## ZSH
 ### Theme / prompt

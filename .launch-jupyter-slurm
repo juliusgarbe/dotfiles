@@ -6,8 +6,9 @@
 #SBATCH --job-name=jupyter
 #SBATCH --account=pism
 #SBATCH --nodes=1
-#SBATCH --ntasks=1
+#SBATCH --ntasks=16
 #SBATCH --cpus-per-task=1
+#SBATCH --mem=60000
 #SBATCH --time=12:00:00
 #SBATCH --output=jupyter-slurm-%j.log
 

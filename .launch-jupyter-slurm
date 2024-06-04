@@ -31,7 +31,7 @@ cd $HOME
 . /p/system/packages/anaconda/5.0.0_py3/etc/profile.d/conda.sh # use this command instead, as 'module' command cannot be found
 
 # optional: if you have a Conda env, activate it here:
-conda activate py2
+conda activate py3
 
 # set the port on which the browser will listen
 BROWSERPORT=7071

@@ -55,7 +55,7 @@ export FZF_DEFAULT_OPTS="--height=70% --cycle --layout=reverse --info=default --
 export NCVIEWBASE=$HOME/.ncmaps/ncmaps_myselection/
 
 # set custom conda environment and fix variables
-export MY_CONDA_ENV=py3
+export MY_CONDA_ENV=py2
 export CONDA_DIR=$HOME/.conda
 export CONDA_PREFIX=$CONDA_DIR/envs/$MY_CONDA_ENV
 

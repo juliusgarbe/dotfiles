@@ -97,6 +97,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Unset DIRCOLORS (clashes with Nord theme)
+unset LS_COLORS
+
 # Extended globbing and expansion
 setopt extended_glob
 

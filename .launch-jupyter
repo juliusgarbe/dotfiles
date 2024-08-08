@@ -1,6 +1,16 @@
-# enable conda and activate custom environment
-. /p/system/packages/anaconda/5.0.0_py3/etc/profile.d/conda.sh
-conda activate py3
+# anaconda path
+#ANACONDA_PATH=/p/system/packages/anaconda/5.0.0_py3 # HPC2015
+ANACONDA_PATH=/p/system/packages/tools/anaconda/2023.09 # HPC2024
+
+# custom conda environment
+MY_CONDA_ENV=py2
+#MY_CONDA_ENV=py3
+
+# enable conda (replaces `conda init`)
+. $ANACONDA_PATH/etc/profile.d/conda.sh
+
+# activate custom environment
+conda activate $MY_CONDA_ENV
 
 # fire up jupyter notebook
 jupyter notebook --no-browser --port=8081 --NotebookApp.iopub_data_rate_limit=10000000000

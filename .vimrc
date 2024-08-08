@@ -145,6 +145,10 @@ augroup END
 "
 set encoding=utf-8 " needed for Airline and emojis
 
+" Workaround to prevent vim starting in REPLACE mode
+" (see https://stackoverflow.com/questions/51388353/vim-changes-into-replace-mode-on-startup)
+nnoremap <esc>^[ <esc>^[ 
+
 " Fix italics escape codes
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"

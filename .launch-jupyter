@@ -3,8 +3,8 @@
 ANACONDA_PATH=/p/system/packages/tools/anaconda/2023.09 # HPC2024
 
 # custom conda environment
-#MY_CONDA_ENV=py2
-MY_CONDA_ENV=py3
+MY_CONDA_ENV=py2
+#MY_CONDA_ENV=py3
 
 # enable conda (replaces `conda init`)
 . $ANACONDA_PATH/etc/profile.d/conda.sh

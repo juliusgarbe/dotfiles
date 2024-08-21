@@ -107,32 +107,13 @@ setopt extended_glob
 # ENVIRONMENT MODULES
 #################
 
-# initial module loads
-if [[ "${SSH_CLIENT:0:3}" == 158 ]] # connections from home (e.g. if connecting directly to HPC2015)
-then
-    source /usr/share/Modules/$MODULE_VERSION/init/zsh # Make ZSH aware of module command
-    module load cdo/1.9.10/threadsafe &> /dev/null  # suppress stdout
-
-    ANACONDA_PATH=/p/system/packages/anaconda/5.0.0_py3 # set anaconda path (replaces `conda init`)
-
-elif [[ "${SSH_CLIENT:0:3}" == 193 ]] # connections from within PIK (e.g. if using SSH ProxyJump for HPC2024)
-then
-    module load cdo &> /dev/null  # suppress stdout
-
-    ANACONDA_PATH=/p/system/packages/tools/anaconda/2023.09 # set anaconda path (replaces `conda init`)
-
-else
-    : # do nothing
-fi
-
 #module load pism  # requires to load module proj4
-#module load intel/2018.1  # required by nco/4.7.8
-#module load nco/4.7.8 &> /dev/null  # suppress stdout
+#module load proj4  # required when loading module pism
+#module load netcdf-c/4.9.0/gnu/10.2 #netcdf/4.1.3/intel/16.0.0/serial
+module load cdo &> /dev/null  # suppress stdout
 module load nco
 module load ncview
-#module load proj4  # required when loading module pism
-#export NETCDF_VERSION=netcdf-c/4.9.0/gnu/10.2 #netcdf/4.1.3/intel/16.0.0/serial
-#module load $NETCDF_VERSION
+module load anaconda &> /dev/null  # suppress stdout
 
 #################
 
@@ -172,12 +153,10 @@ if [[ -f $HOME/.cdo/cdoCompletion.zsh ]]; then
   source $HOME/.cdo/cdoCompletion.zsh
 fi
 
+# activate custom conda environment (set in .bash/variables.sh)
+source activate $MY_CONDA_ENV
+
 #################
-#
-# enable conda
-. $ANACONDA_PATH/etc/profile.d/conda.sh
-# activate custom environment (set in .bash/variables.sh)
-conda activate $MY_CONDA_ENV
 
 # show disk usage on startup
 #echo "******************** DISK USAGE ********************"

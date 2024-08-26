@@ -26,12 +26,14 @@ echo "------------------------------------------------------------"
 cd $HOME
 
 # Some initial setup
-# module purge
-# module load anaconda/5.0.0_py3 # this is where the Jupyter client comes from
-. /p/system/packages/anaconda/5.0.0_py3/etc/profile.d/conda.sh # use this command instead, as 'module' command cannot be found
+module purge
+module load anaconda &> /dev/null  # suppress stdout # this is where the Jupyter client comes from
 
 # optional: if you have a Conda env, activate it here:
-conda activate py3
+#MY_CONDA_ENV=py2
+MY_CONDA_ENV=py3
+
+source activate $MY_CONDA_ENV
 
 # set the port on which the browser will listen
 BROWSERPORT=7071

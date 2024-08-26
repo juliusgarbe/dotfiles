@@ -154,7 +154,7 @@ if [[ -f $HOME/.cdo/cdoCompletion.zsh ]]; then
 fi
 
 # activate custom conda environment (set in .bash/variables.sh)
-conda activate $MY_CONDA_ENV
+source activate $MY_CONDA_ENV
 
 #################
 

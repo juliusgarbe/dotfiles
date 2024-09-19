@@ -159,8 +159,8 @@ source activate $MY_CONDA_ENV
 #################
 
 # show disk usage on startup
-#echo "******************** DISK USAGE ********************"
-#. $HOME/scripts/Cluster/print_project_quota.sh
+echo "******************** DISK USAGE ********************"
+. $HOME/scripts/Cluster/print_project_quota.sh
 
 # show currently loaded modules
 echo "********************* MODULES **********************"

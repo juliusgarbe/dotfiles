@@ -111,8 +111,7 @@ setopt extended_glob
 #module load proj4  # required when loading module pism
 #module load netcdf-c/4.9.0/gnu/10.2 #netcdf/4.1.3/intel/16.0.0/serial
 module load cdo &> /dev/null  # suppress stdout
-#module load nco # default version (5.1.9) does not include ncap2 anymore
-module load nco/5.1.9-spack # includes ncap2
+module load nco
 module load ncview
 module load anaconda &> /dev/null  # suppress stdout
 

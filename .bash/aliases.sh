@@ -13,6 +13,7 @@ alias ncview="ncview -noautoflip -small -maxsize 75" #-pause_on_restart #maxsize
 alias nd="ncdump -h"
 alias ndv="ncdump -v"
 alias ndiff="ncdiff"
+alias ncap2="/p/system/packages/spack/opt/spack/linux-rhel8-zen4/gcc-13.2.0/nco-5.1.9-4ma3r52n7sxeok2jjccf5yyegjwmqrrz/bin/ncap2" # from module 'nco/5.1.9-spack'
 alias diff="vimdiff"
 alias less="less -MNS"
 alias o="bat"
